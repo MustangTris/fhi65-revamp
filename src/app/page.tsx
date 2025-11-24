@@ -5,50 +5,74 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-[#002147] text-white min-h-[600px] flex flex-col lg:flex-row">
-        {/* Left Side: Text */}
+      <section className="relative bg-slate-50 overflow-hidden min-h-[700px] flex flex-col lg:flex-row">
+        {/* Background Gradient */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-yellow-400/20 via-blue-100/40 to-transparent pointer-events-none"></div>
+
+        {/* Left Side: Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center p-8 lg:p-20 relative z-10">
           <div className="max-w-xl mx-auto lg:mx-0">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-              Medicare Made <span className="text-[#FFD700]">Easy.</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-10 font-light">
-              Our expert advice is always free, no obligation.
-            </p>
-
-            {/* Social Proof */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-              {[
-                { name: "Sarah J.", text: "Made everything so simple!" },
-                { name: "Robert M.", text: "Trustworthy and kind." },
-                { name: "Emily R.", text: "Highly recommended!" }
-              ].map((review, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
-                  <div className="flex mb-1 text-[#FFD700]">
-                    {"★★★★★"}
-                  </div>
-                  <p className="text-sm italic text-gray-200">"{review.text}"</p>
-                  <p className="text-xs font-bold mt-2 text-gray-400">- {review.name}</p>
-                </div>
-              ))}
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-900 text-sm font-bold mb-6 shadow-sm border border-blue-200">
+              <span className="mr-2">📍</span> La Quinta's Local Experts
             </div>
 
-            <Link
-              href="/quotes"
-              className="inline-block bg-[#FFD700] text-[#002147] font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:bg-yellow-400 hover:scale-105 transition-all duration-300"
-            >
-              Get a Quote
-            </Link>
+            {/* Headline */}
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-[1.1] text-[#002147]">
+              Medicare <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
+                Made Simple.
+              </span>
+            </h1>
+
+            <p className="text-xl text-gray-600 mb-10 font-medium leading-relaxed max-w-lg">
+              Navigate your options with confidence. Our expert advice is always free, with no obligation to enroll.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                href="/quotes"
+                className="inline-flex justify-center items-center bg-gradient-to-r from-[#002147] to-blue-900 text-white font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                Get a Free Quote
+              </Link>
+              <Link
+                href="/about"
+                className="inline-flex justify-center items-center bg-white text-[#002147] font-bold text-lg px-8 py-4 rounded-full shadow-md border border-gray-200 hover:bg-gray-50 hover:-translate-y-1 transition-all duration-300"
+              >
+                Meet the Team
+              </Link>
+            </div>
+
+            {/* Social Proof - Floating Card */}
+            <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-white/50 shadow-xl max-w-sm transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
+              <div className="flex items-center gap-4 mb-3">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3].map(i => (
+                    <div key={i} className={`w-10 h-10 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-500`}>
+                      User
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col">
+                  <div className="flex text-yellow-400 text-sm">★★★★★</div>
+                  <span className="text-xs text-gray-600 font-bold">Trusted by 500+ Locals</span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-700 italic">"Randy and Lisa made everything so easy to understand!"</p>
+            </div>
           </div>
         </div>
 
         {/* Right Side: Image */}
-        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+        <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-full">
+          <div className="absolute inset-0 bg-blue-900/5 z-10 rounded-bl-[80px] pointer-events-none"></div>
           <Image
             src="/images/building.jpg"
             alt="Foulds Health Insurance Office Building"
             fill
-            className="object-cover"
+            className="object-cover rounded-bl-[80px] shadow-2xl"
             priority
           />
         </div>
@@ -100,7 +124,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
+              <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl border-4 border-[#FFD700]">
                 <Image
                   src="/images/randy-lisa.png"
                   alt="Randy and Lisa Foulds"
