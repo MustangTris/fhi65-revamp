@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   return (
@@ -7,7 +8,14 @@ const Navbar = () => {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="text-2xl font-bold tracking-wide">
-              FHI<span className="text-[#FFD700]">65</span>
+              <Image
+                src="/images/logo.png"
+                alt="Foulds Health Insurance Logo"
+                width={180}
+                height={64}
+                className="h-16 w-auto"
+                priority
+              />
             </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">

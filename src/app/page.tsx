@@ -1,13 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-[#002147] text-white py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero-pattern.svg')] opacity-10"></div> {/* Placeholder for pattern */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
+      <section className="relative bg-[#002147] text-white min-h-[600px] flex flex-col lg:flex-row">
+        {/* Left Side: Text */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center p-8 lg:p-20 relative z-10">
+          <div className="max-w-xl mx-auto lg:mx-0">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
               Medicare Made <span className="text-[#FFD700]">Easy.</span>
             </h1>
@@ -16,14 +17,14 @@ export default function Home() {
             </p>
 
             {/* Social Proof */}
-            <div className="flex flex-col md:flex-row justify-center gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
               {[
                 { name: "Sarah J.", text: "Made everything so simple!" },
                 { name: "Robert M.", text: "Trustworthy and kind." },
                 { name: "Emily R.", text: "Highly recommended!" }
               ].map((review, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 max-w-xs mx-auto md:mx-0">
-                  <div className="flex justify-center mb-2 text-[#FFD700]">
+                <div key={index} className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20">
+                  <div className="flex mb-1 text-[#FFD700]">
                     {"★★★★★"}
                   </div>
                   <p className="text-sm italic text-gray-200">"{review.text}"</p>
@@ -39,6 +40,17 @@ export default function Home() {
               Get a Quote
             </Link>
           </div>
+        </div>
+
+        {/* Right Side: Image */}
+        <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+          <Image
+            src="/images/building.jpg"
+            alt="Foulds Health Insurance Office Building"
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </section>
 
@@ -88,9 +100,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              {/* Placeholder for an image - using a colored div for now */}
-              <div className="aspect-video bg-gray-300 rounded-xl shadow-lg flex items-center justify-center text-gray-500">
-                [Team Image Placeholder]
+              <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/randy-lisa.png"
+                  alt="Randy and Lisa Foulds"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
             <div className="md:w-1/2 text-center md:text-left">
