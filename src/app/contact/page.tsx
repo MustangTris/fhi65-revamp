@@ -5,7 +5,7 @@ export default function ContactPage() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-4xl font-bold text-[#002147] mb-4">Get in Touch</h1>
                     <p className="text-lg text-gray-600">
-                        Have questions about Medicare? We're here to help. Reach out to us directly or fill out the form below.
+                        Have questions about Medicare? We&apos;re here to help. Reach out to us directly or fill out the form below.
                     </p>
                 </div>
 

@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${outfit.variable} font-sans bg-slate-50 text-slate-900`}>
+            <body className={`${inter.variable} ${outfit.variable} font-sans bg-white text-black`}>
                 <div className="flex flex-col min-h-screen">
                     <Navbar />
                     <main className="flex-grow">
