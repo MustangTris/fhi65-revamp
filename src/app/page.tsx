@@ -55,7 +55,7 @@ export default function Home() {
         <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-full">
           <div className="absolute inset-0 bg-gradient-to-t from-[#005d9a]/10 to-transparent z-10 pointer-events-none"></div>
           <Image
-            src="/images/building.jpg"
+            src="/images/office-building.jpg"
             alt="Foulds Health Insurance Office Building"
             fill
             className="object-cover rounded-bl-[80px] shadow-2xl"

@@ -13,7 +13,7 @@ const Navbar = () => {
   const menuItems = ['Home', 'About', 'Quotes', 'Forms', 'News'];
 
   return (
-    <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+    <div className="sticky top-4 z-50 flex justify-center px-4 mb-8">
       <nav className="glass rounded-full px-6 py-3 shadow-lg flex items-center justify-between w-full max-w-5xl transition-all duration-300 hover:shadow-xl relative">
         <div className="flex-shrink-0 flex items-center">
           <Link href="/" className="flex items-center">

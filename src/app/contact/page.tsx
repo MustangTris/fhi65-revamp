@@ -59,10 +59,17 @@ export default function ContactPage() {
                         </div>
 
                         {/* Map Placeholder */}
-                        <div className="mt-10 h-64 bg-blue-50/50 rounded-2xl overflow-hidden relative border border-blue-100">
-                            <div className="absolute inset-0 flex items-center justify-center text-[#005d9a]/50 font-bold">
-                                [Map Integration Placeholder]
-                            </div>
+                        <div className="mt-10 h-64 bg-blue-50/50 rounded-2xl overflow-hidden relative border border-blue-100 shadow-inner">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.997687838646!2d-116.2956876847966!3d33.67215698071114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80daf7890b0e0001%3A0x1234567890abcdef!2s78010%20Main%20St%20%23208%2C%20La%20Quinta%2C%20CA%2092253!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Foulds Health Insurance Office Location"
+                            ></iframe>
                         </div>
                     </div>
 

@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "title": "Medicare Changes Coming in 2025",
+        "excerpt": "Important updates to Part D prescription drug coverage that could affect your out-of-pocket costs.",
+        "date": "October 15, 2024",
+        "category": "Medicare Updates",
+        "content": "Full article content would go here..."
+    },
+    {
+        "id": "2",
+        "title": "The Difference Between Medigap and Medicare Advantage",
+        "excerpt": "A comprehensive guide to understanding the two main ways to get your Medicare coverage.",
+        "date": "September 22, 2024",
+        "category": "Education",
+        "content": "Full article content would go here..."
+    },
+    {
+        "id": "3",
+        "title": "When to Enroll in Medicare Part B",
+        "excerpt": "Avoid late enrollment penalties by understanding your Initial Enrollment Period.",
+        "date": "August 10, 2024",
+        "category": "Enrollment",
+        "content": "Full article content would go here..."
+    }
+]
