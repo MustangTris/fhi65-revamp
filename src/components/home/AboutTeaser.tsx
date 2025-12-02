@@ -21,7 +21,7 @@ export const AboutTeaser = () => {
                                 className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50"
                             >
                                 <Image
-                                    src="/images/randy-lisa.png"
+                                    src="/images/randy-lisa-portrait.jpg"
                                     alt="Randy and Lisa Foulds"
                                     fill
                                     className="object-cover"

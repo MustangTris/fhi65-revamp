@@ -31,7 +31,7 @@ export default function AboutPage() {
                             <div className="lg:w-1/2">
                                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white/50 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <Image
-                                        src="/images/randy-lisa.png"
+                                        src="/images/randy-lisa-portrait.jpg"
                                         alt="Randy and Lisa Foulds"
                                         fill
                                         className="object-cover"

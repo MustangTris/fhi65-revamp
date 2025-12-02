@@ -69,7 +69,7 @@ export const Hero = () => {
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-200/30 to-purple-200/30 rounded-[3rem] transform rotate-3 scale-105 blur-2xl" />
                     <div className="relative h-full w-full rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-white/30">
                         <Image
-                            src="/images/building.jpg"
+                            src="/images/office-building.jpg"
                             alt="Foulds Health Insurance Office Building"
                             fill
                             className="object-cover"
