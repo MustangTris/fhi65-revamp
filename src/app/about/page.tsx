@@ -1,44 +1,56 @@
 import Image from "next/image";
+import { BackgroundBlobs } from "../../components/ui/BackgroundBlobs";
 
 export default function AboutPage() {
     return (
-        <div className="bg-white">
+        <div className="relative min-h-screen overflow-hidden">
+            <BackgroundBlobs />
+
             {/* Hero Section */}
-            <section className="relative bg-[#002147] text-white py-20 lg:py-32">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6">About Us</h1>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="inline-block mb-6">
+                        <span className="py-2 px-4 rounded-full bg-blue-100/50 text-[#005d9a] font-bold text-sm border border-blue-200 backdrop-blur-sm">
+                            Our Mission
+                        </span>
+                    </div>
+                    <h1 className="text-5xl md:text-7xl font-extrabold mb-8 text-[#005d9a] tracking-tight">
+                        About Us
+                    </h1>
+                    <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
                         Dedicated to simplifying Medicare for our community with honesty, integrity, and expertise.
                     </p>
                 </div>
             </section>
 
             {/* Our Story Section */}
-            <section className="py-20">
+            <section className="py-20 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col lg:flex-row items-center gap-16">
-                        <div className="lg:w-1/2">
-                            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                                <Image
-                                    src="/images/randy-lisa.png"
-                                    alt="Randy and Lisa Foulds"
-                                    fill
-                                    className="object-cover"
-                                />
+                    <div className="glass-card rounded-[3rem] p-8 md:p-16">
+                        <div className="flex flex-col lg:flex-row items-center gap-16">
+                            <div className="lg:w-1/2">
+                                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white/50 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                                    <Image
+                                        src="/images/randy-lisa.png"
+                                        alt="Randy and Lisa Foulds"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="lg:w-1/2">
-                            <h2 className="text-3xl font-bold text-[#002147] mb-6">Our Story</h2>
-                            <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
-                                <p>
-                                    For over a decade, Foulds Health Insurance has been a beacon of trust for seniors navigating the complex waters of Medicare. Founded by Randy and Lisa Foulds, our agency was built on a simple premise: treat every client like family.
-                                </p>
-                                <p>
-                                    We understand that healthcare decisions are personal and often overwhelming. That&apos;s why we don&apos;t just sell policies; we build relationships. We take the time to understand your unique health needs, budget, and lifestyle to recommend the best possible coverage.
-                                </p>
-                                <p>
-                                    Based in La Quinta, CA, we are proud to serve our local community and beyond. Our advice is always free, and our commitment to your well-being is unwavering.
-                                </p>
+                            <div className="lg:w-1/2">
+                                <h2 className="text-3xl md:text-4xl font-bold text-[#005d9a] mb-8">Our Story</h2>
+                                <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
+                                    <p>
+                                        For over a decade, Foulds Health Insurance has been a beacon of trust for seniors navigating the complex waters of Medicare. Founded by Randy and Lisa Foulds, our agency was built on a simple premise: treat every client like family.
+                                    </p>
+                                    <p>
+                                        We understand that healthcare decisions are personal and often overwhelming. That&apos;s why we don&apos;t just sell policies; we build relationships. We take the time to understand your unique health needs, budget, and lifestyle to recommend the best possible coverage.
+                                    </p>
+                                    <p>
+                                        Based in La Quinta, CA, we are proud to serve our local community and beyond. Our advice is always free, and our commitment to your well-being is unwavering.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -46,11 +58,11 @@ export default function AboutPage() {
             </section>
 
             {/* Values Section */}
-            <section className="bg-slate-50 py-20">
+            <section className="py-20 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-[#002147] mb-4">Why Choose Us?</h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#005d9a] mb-6">Why Choose Us?</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto text-lg font-medium">
                             We believe in doing business the right way. Here are the core values that drive everything we do.
                         </p>
                     </div>
@@ -85,12 +97,12 @@ export default function AboutPage() {
                                 )
                             }
                         ].map((value, index) => (
-                            <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
-                                <div className="w-14 h-14 bg-blue-50 text-[#002147] rounded-lg flex items-center justify-center mb-6">
+                            <div key={index} className="glass-card p-10 rounded-[2rem] hover:-translate-y-2 transition-all duration-300 group">
+                                <div className="w-16 h-16 bg-gradient-to-br from-[#005d9a] to-[#1e9cd7] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 transition-transform duration-300">
                                     {value.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-[#002147] mb-3">{value.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">
+                                <h3 className="text-2xl font-bold text-[#005d9a] mb-4">{value.title}</h3>
+                                <p className="text-gray-600 leading-relaxed font-medium">
                                     {value.description}
                                 </p>
                             </div>
@@ -101,3 +113,4 @@ export default function AboutPage() {
         </div>
     );
 }
+
