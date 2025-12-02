@@ -12,8 +12,8 @@ export const AboutTeaser = () => {
                     {/* Background gradient for the card */}
                     <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-blue-50/50 to-transparent pointer-events-none" />
 
-                    <div className="flex flex-col md:flex-row items-center gap-12 relative z-10">
-                        <div className="md:w-1/2">
+                    <div className="flex flex-col lg:flex-row items-center gap-12 relative z-10">
+                        <div className="lg:w-1/2">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
@@ -28,7 +28,7 @@ export const AboutTeaser = () => {
                                 />
                             </motion.div>
                         </div>
-                        <div className="md:w-1/2 text-center md:text-left">
+                        <div className="lg:w-1/2 text-center lg:text-left">
                             <motion.h2
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -67,3 +67,4 @@ export const AboutTeaser = () => {
         </section>
     );
 };
+
