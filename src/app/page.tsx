@@ -25,7 +25,7 @@ export default function Home() {
             </h1>
 
             <p className="text-xl text-gray-600 mb-10 font-medium leading-relaxed max-w-lg">
-              Navigate your options with confidence. Our expert advice is always free, with no obligation to enroll.
+              Serving the Valley and educating clients for over 30 years. Navigate your options with confidence. Our expert advice is always free, with no obligation to enroll.
             </p>
 
             {/* Buttons */}

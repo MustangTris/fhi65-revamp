@@ -13,6 +13,29 @@ export default function ContactPage() {
                     </p>
                 </div>
 
+                {/* Social Security Assistance Notice */}
+                <div className="max-w-4xl mx-auto mb-16">
+                    <div className="bg-gradient-to-r from-blue-50 to-white border border-blue-100 rounded-3xl p-8 md:p-10 shadow-lg relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -mr-16 -mt-16"></div>
+                        <div className="relative z-10 flex flex-col md:flex-row items-start gap-6">
+                            <div className="bg-[#005d9a] text-white p-4 rounded-2xl shrink-0 shadow-md">
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 className="text-2xl font-bold text-[#005d9a] mb-3">Not 65 Yet? Start Here.</h3>
+                                <p className="text-lg text-gray-700 leading-relaxed font-medium mb-4">
+                                    We specialize in helping individuals who aren&apos;t 65 yet navigate the Social Security process <strong>prior to your first appointment</strong>.
+                                </p>
+                                <p className="text-gray-600 leading-relaxed">
+                                    This step is crucial! Handling this beforehand makes the entire transition smoother and ensures your enrollment process is as easy as possible. Reach out to us today, and we&apos;ll guide you through exactly what needs to be done.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Contact Information */}
                     <div className="glass-card p-8 md:p-10 rounded-[2rem]">
