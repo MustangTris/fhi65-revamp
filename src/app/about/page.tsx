@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { BackgroundBlobs } from "../../components/ui/BackgroundBlobs";
+import { StaticBackground } from "../../components/ui/StaticBackground";
 
 export default function AboutPage() {
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <BackgroundBlobs />
+            <StaticBackground />
 
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
@@ -20,34 +20,6 @@ export default function AboutPage() {
                     <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto font-medium leading-relaxed">
                         Dedicated to simplifying Medicare for our community with honesty, integrity, and expertise.
                     </p>
-                </div>
-            </section>
-
-            {/* Awards Section */}
-            <section className="py-12 relative z-10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl font-bold text-[#005d9a] mb-4">Awards & Recognition</h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] mx-auto rounded-full"></div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
-                            <div className="text-4xl mb-4">🏆</div>
-                            <h3 className="text-lg font-bold text-[#005d9a] mb-2">Business of The Year 2025</h3>
-                            <p className="text-sm text-gray-600 font-medium">Greater Coachella Valley Chamber of Commerce La Quinta</p>
-                            <p className="text-xs text-gray-500 mt-2 italic">Recognized by the Senate Congress and County Supervisor</p>
-                        </div>
-                        <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
-                            <div className="text-4xl mb-4">⭐</div>
-                            <h3 className="text-lg font-bold text-[#005d9a] mb-2">Anthem Shooting Star 2021</h3>
-                            <p className="text-sm text-gray-600 font-medium">For Stellar Stewardship</p>
-                        </div>
-                        <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
-                            <div className="text-4xl mb-4">🦅</div>
-                            <h3 className="text-lg font-bold text-[#005d9a] mb-2">NABIP Soaring Eagle</h3>
-                            <p className="text-sm text-gray-600 font-medium">Leading Producers Round Table 2023</p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -80,6 +52,34 @@ export default function AboutPage() {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Awards Section */}
+            <section className="py-12 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-[#005d9a] mb-4">Awards & Recognition</h2>
+                        <div className="w-24 h-1 bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] mx-auto rounded-full"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
+                            <div className="text-4xl mb-4">🏆</div>
+                            <h3 className="text-lg font-bold text-[#005d9a] mb-2">Business of The Year 2025</h3>
+                            <p className="text-sm text-gray-600 font-medium">Greater Coachella Valley Chamber of Commerce La Quinta</p>
+                            <p className="text-xs text-gray-500 mt-2 italic">Recognized by the Senate Congress and County Supervisor</p>
+                        </div>
+                        <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
+                            <div className="text-4xl mb-4">⭐</div>
+                            <h3 className="text-lg font-bold text-[#005d9a] mb-2">Anthem Shooting Star 2021</h3>
+                            <p className="text-sm text-gray-600 font-medium">For Stellar Stewardship</p>
+                        </div>
+                        <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
+                            <div className="text-4xl mb-4">🦅</div>
+                            <h3 className="text-lg font-bold text-[#005d9a] mb-2">NABIP Soaring Eagle</h3>
+                            <p className="text-sm text-gray-600 font-medium">Leading Producers Round Table 2023</p>
                         </div>
                     </div>
                 </div>

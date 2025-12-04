@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const reviews = [
     {
@@ -56,30 +55,27 @@ export default function ReviewCarousel() {
             </div>
 
             <div className="relative min-h-[180px]">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={currentIndex}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.5 }}
-                        className="absolute inset-0"
+                {reviews.map((review, index) => (
+                    <div
+                        key={review.id}
+                        className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                            }`}
                     >
                         <p className="text-gray-700 italic mb-6 leading-relaxed text-lg font-medium">
-                            &quot;{reviews[currentIndex].text}&quot;
+                            &quot;{review.text}&quot;
                         </p>
                         <div className="flex items-center justify-between border-t border-gray-200/50 pt-4">
                             <span className="font-bold text-[#005d9a]">
-                                {reviews[currentIndex].author}
+                                {review.author}
                             </span>
-                            <span className="text-sm text-gray-500">{reviews[currentIndex].time}</span>
+                            <span className="text-sm text-gray-500">{review.time}</span>
                         </div>
-                    </motion.div>
-                </AnimatePresence>
+                    </div>
+                ))}
             </div>
 
             {/* Progress Indicators */}
-            <div className="flex justify-center gap-2 mt-4 absolute bottom-6 left-0 right-0">
+            <div className="flex justify-center gap-2 mt-4 absolute bottom-6 left-0 right-0 z-20">
                 {reviews.map((_, idx) => (
                     <div
                         key={idx}

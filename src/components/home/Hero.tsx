@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import ReviewCarousel from "../ReviewCarousel";
 
 export const Hero = () => {
@@ -11,12 +10,7 @@ export const Hero = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                 {/* Left Content */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="w-full lg:w-1/2 z-10"
-                >
+                <div className="w-full lg:w-1/2 z-10 animate-fade-in-left">
                     <div className="glass-card rounded-[3rem] p-8 md:p-12 relative overflow-hidden">
                         {/* Decorative shine */}
                         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/40 to-transparent pointer-events-none" />
@@ -57,15 +51,10 @@ export const Hero = () => {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Right Image */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="w-full lg:w-1/2 relative h-[600px] lg:h-[800px]"
-                >
+                <div className="w-full lg:w-1/2 relative h-[600px] lg:h-[800px] animate-fade-in-right">
                     <div className="absolute inset-0 bg-gradient-to-tr from-blue-200/30 to-purple-200/30 rounded-[3rem] transform rotate-3 scale-105 blur-2xl" />
                     <div className="relative h-full w-full rounded-[3rem] overflow-hidden shadow-2xl border-[8px] border-white/30">
                         <Image
@@ -78,7 +67,7 @@ export const Hero = () => {
                         {/* Glass overlay at bottom */}
                         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#005d9a]/80 to-transparent backdrop-blur-[2px]" />
                     </div>
-                </motion.div>
+                </div>
 
             </div>
         </section>

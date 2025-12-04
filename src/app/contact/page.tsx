@@ -1,9 +1,9 @@
-import { BackgroundBlobs } from "../../components/ui/BackgroundBlobs";
+import { StaticBackground } from "../../components/ui/StaticBackground";
 
 export default function ContactPage() {
     return (
         <div className="relative min-h-screen overflow-hidden pt-32 pb-20">
-            <BackgroundBlobs />
+            <StaticBackground />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
