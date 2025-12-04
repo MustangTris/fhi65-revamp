@@ -144,13 +144,13 @@ const AgencyBlocForm = () => {
                 </div>
 
                 <div>
-                    <label htmlFor='email'>Email</label>
-                    <input type='text' name='email' id='email' placeholder="john@example.com" />
+                    <label htmlFor='email'>Email (required)</label>
+                    <input type='text' name='email' id='email' required aria-required='true' placeholder="john@example.com" />
                 </div>
 
                 <div>
-                    <label htmlFor='cellPhone'>Cell Phone</label>
-                    <input type='text' name='cellPhone' id='cellPhone' placeholder="(555) 123-4567" />
+                    <label htmlFor='cellPhone'>Cell Phone (required)</label>
+                    <input type='text' name='cellPhone' id='cellPhone' required aria-required='true' placeholder="(555) 123-4567" />
                 </div>
 
                 <div>

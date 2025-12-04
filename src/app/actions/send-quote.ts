@@ -59,7 +59,10 @@ export async function sendQuoteEmail(prevState: any, formData: FormData) {
         success = true;
     } catch (error) {
         console.error('Failed to send email:', error);
-        return { success: false, message: 'Failed to send quote request. Please try again.' };
+        // @ts-ignore
+        const errorMessage = error?.message || 'Unknown error';
+        console.error('Error details:', errorMessage);
+        return { success: false, message: `Failed to send quote request: ${errorMessage}` };
     }
 
     if (success) {
