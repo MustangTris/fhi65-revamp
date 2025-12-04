@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { StaticBackground } from "../../components/ui/StaticBackground";
+
+export const metadata: Metadata = {
+    title: "About Us | Foulds Health Insurance",
+    description: "Learn about our mission, our story, and why we are dedicated to simplifying Medicare for our community.",
+};
 
 export default function AboutPage() {
     return (
@@ -28,8 +34,8 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="glass-card rounded-[3rem] p-8 md:p-16">
                         <div className="flex flex-col lg:flex-row items-center gap-16">
-                            <div className="lg:w-1/2">
-                                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white/50">
+                            <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
+                                <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl border-[8px] border-white/50">
                                     <Image
                                         src="/images/randy-lisa-portrait.jpg"
                                         alt="Randy and Lisa Foulds"
@@ -38,7 +44,7 @@ export default function AboutPage() {
                                     />
                                 </div>
                             </div>
-                            <div className="lg:w-1/2">
+                            <div className="w-full lg:w-1/2">
                                 <h2 className="text-3xl md:text-4xl font-bold text-[#005d9a] mb-8">Our Story</h2>
                                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
                                     <p>
@@ -71,12 +77,12 @@ export default function AboutPage() {
                         <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
                             <div className="text-4xl mb-4">⭐</div>
                             <h3 className="text-lg font-bold text-[#005d9a] mb-2">Anthem Shooting Star 2021</h3>
-                            <p className="text-sm text-gray-600 font-medium">For Stellar Stewardship</p>
+                            <p className="text-sm text-gray-600 font-medium">Recognized for client retention and leading service</p>
                         </div>
                         <div className="glass-card p-8 rounded-3xl text-center border border-blue-100 hover:shadow-xl transition-all duration-300">
                             <div className="text-4xl mb-4">🦅</div>
                             <h3 className="text-lg font-bold text-[#005d9a] mb-2">NABIP Soaring Eagle</h3>
-                            <p className="text-sm text-gray-600 font-medium">Leading Producers Round Table 2023</p>
+                            <p className="text-sm text-gray-600 font-medium">Top 10% of agents in the country</p>
                         </div>
                     </div>
                 </div>

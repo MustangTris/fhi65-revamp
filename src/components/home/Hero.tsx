@@ -6,7 +6,7 @@ import ReviewCarousel from "../ReviewCarousel";
 
 export const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
+        <section className="relative min-h-[110vh] flex items-center pt-48 pb-32 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                 {/* Left Content */}

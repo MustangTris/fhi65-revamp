@@ -24,10 +24,10 @@ export const ProcessSection = () => {
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
                     style={{ backgroundImage: "url('/images/office-building.jpg')" }}
                 />
-                <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px]" />
+                <div className="absolute inset-0 bg-white/70 backdrop-blur-[1px]" />
             </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
