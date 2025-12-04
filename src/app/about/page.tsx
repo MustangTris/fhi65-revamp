@@ -42,13 +42,10 @@ export default function AboutPage() {
                                 <h2 className="text-3xl md:text-4xl font-bold text-[#005d9a] mb-8">Our Story</h2>
                                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
                                     <p>
-                                        For over a decade, Foulds Health Insurance has been a beacon of trust for seniors navigating the complex waters of Medicare. Founded by Randy and Lisa Foulds, our agency was built on a simple premise: treat every client like family.
+                                        For the past 10 years, I’ve learned everything I can about Medicare from the best expert in the field, my mom, Maureen Feldman.
                                     </p>
                                     <p>
-                                        We understand that healthcare decisions are personal and often overwhelming. That&apos;s why we don&apos;t just sell policies; we build relationships. We take the time to understand your unique health needs, budget, and lifestyle to recommend the best possible coverage.
-                                    </p>
-                                    <p>
-                                        Based in La Quinta, CA, we are proud to serve our local community and beyond. Our advice is always free, and our commitment to your well-being is unwavering.
+                                        It can be very confusing and I am dedicated to simplifying the process for my clients and finding them the best plan that meets their needs.
                                     </p>
                                 </div>
                             </div>

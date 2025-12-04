@@ -12,6 +12,19 @@ export default function NewsPage() {
                     </p>
                 </div>
 
+                <div className="mb-16">
+                    <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
+                        <h2 className="text-2xl font-bold text-[#002147] mb-4">Subscribe to our Newsletter</h2>
+                        <p className="text-gray-600 mb-6">
+                            Get the latest Medicare updates and health tips delivered directly to your inbox.
+                        </p>
+                        {/* Substack Embed Placeholder */}
+                        <div className="max-w-md mx-auto h-12 bg-gray-100 rounded border border-dashed border-gray-300 flex items-center justify-center text-sm text-gray-500">
+                            [Substack Embed Code Will Go Here]
+                        </div>
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {articles.map((post) => (
                         <article key={post.id} className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">

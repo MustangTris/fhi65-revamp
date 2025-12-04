@@ -20,8 +20,17 @@ const steps = [
 
 export const ProcessSection = () => {
     return (
-        <section className="py-24 relative z-10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-24 relative z-10 overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+                    style={{ backgroundImage: "url('/images/office-building.jpg')" }}
+                />
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-[1px]" />
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center mb-20">
                     <div className="inline-block glass px-8 py-3 rounded-full mb-6">
                         <h2 className="text-2xl md:text-3xl font-bold text-[#005d9a] uppercase tracking-wide">How It Works</h2>
