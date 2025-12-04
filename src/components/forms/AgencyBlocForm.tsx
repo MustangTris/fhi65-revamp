@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useActionState, useEffect } from 'react';
+import React, { useActionState } from 'react';
 import { sendQuoteEmail } from '../../app/actions/send-quote';
-import { useRouter } from 'next/navigation';
 
 const initialState = {
     message: '',
@@ -11,13 +10,6 @@ const initialState = {
 
 const AgencyBlocForm = () => {
     const [state, formAction, isPending] = useActionState(sendQuoteEmail, initialState);
-    const router = useRouter();
-
-    useEffect(() => {
-        if (state.success) {
-            router.push('/thank-you');
-        }
-    }, [state.success, router]);
 
     return (
         <div className="w-full max-w-md mx-auto">
@@ -102,7 +94,7 @@ const AgencyBlocForm = () => {
                 action={formAction}
                 className="abLeadForm space-y-6"
             >
-                {state.message && !state.success && (
+                {state?.message && !state?.success && (
                     <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
                         {state.message}
                     </div>

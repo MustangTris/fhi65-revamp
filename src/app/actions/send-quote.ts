@@ -1,8 +1,11 @@
 'use server'
 
 import nodemailer from 'nodemailer';
+import { redirect } from 'next/navigation';
 
 export async function sendQuoteEmail(prevState: any, formData: FormData) {
+    let success = false;
+
     try {
         const data = {
             firstName: formData.get('firstName'),
@@ -53,9 +56,13 @@ export async function sendQuoteEmail(prevState: any, formData: FormData) {
             html: htmlContent,
         });
 
-        return { success: true, message: 'Quote request sent successfully!' };
+        success = true;
     } catch (error) {
         console.error('Failed to send email:', error);
         return { success: false, message: 'Failed to send quote request. Please try again.' };
+    }
+
+    if (success) {
+        redirect('/thank-you');
     }
 }
