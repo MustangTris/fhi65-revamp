@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgencyBloc Test Form</title>
+    <style>
+        .abLeadForm *,
+        .abLeadForm *:before,
+        .abLeadForm *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .abLeadForm {
+            padding: 15px;
+            background: #FFF;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 50px auto;
+            max-width: 290px;
+            display: block;
+            color: black;
+            font-size: 16px;
+        }
+
+        .abLeadForm p {
+            margin: 0 0 1em 0;
+        }
+
+        .abLeadForm input[type="text"],
+        .abLeadForm select,
+        .abLeadForm input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            max-width: 100%;
+        }
+
+
+        .abLeadForm input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .abLeadForm label {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+
+        .invalid-message {
+            display: none;
+            color: #8b0000;
+        }
+
+        .abLeadForm:has(:user-invalid) .invalid-message {
+            display: block;
+        }
+
+        .abLeadForm input[type="text"]:user-invalid,
+        .abLeadForm input[type="date"]:user-invalid,
+        .abLeadForm select:user-invalid {
+            outline: 2px solid #8b0000;
+        }
+
+        .form-action {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .abLeadForm button[type="submit"] {
+            width: auto;
+            padding: 16px;
+            background: #333;
+            color: white;
+            border-radius: 4px;
+            border: 0px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .abHP {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <form autocomplete="off" action="https://app.agencybloc.com/fp/webToLead/v1/QWY3BZ6DIFZ7PNCQKGGP/" method="post" class="abLeadForm">
+
+        <p id='invalidMessage' class='invalid-message'>Please review the form.</p>
+        <p><label for='firstName'>First Name (required)</label><br /><input type='text' name='firstName' id='firstName' required aria-required='true'></p>
+
+        <p><label for='middleInitial'>Middle Name</label><br /><input type='text' name='middleInitial' id='middleInitial'></p>
+
+        <p><label for='lastName'>Last Name (required)</label><br /><input type='text' name='lastName' id='lastName' required aria-required='true'></p>
+
+        <p><label for='street1'>Street 1</label><br /><input type='text' name='street1' id='street1'></p>
+
+        <p><label for='street2'>Street 2</label><br /><input type='text' name='street2' id='street2'></p>
+
+        <p><label for='city'>City</label><br /><input type='text' name='city' id='city'></p>
+
+        <p><label for='zip'>Zip</label><br /><input type='text' name='zip' id='zip'></p>
+
+        <p><label for='stateAbbrev'>State Abbreviation</label><br /><input type='text' name='stateAbbrev' id='stateAbbrev'></p>
+
+        <p><label for='email'>Email</label><br /><input type='text' name='email' id='email'></p>
+
+        <p><label for='cellPhone'>Cell Phone</label><br /><input type='text' name='cellPhone' id='cellPhone'></p>
+
+        <p><label for='birthDate'>Date of Birth</label><br /><input type='date' name='birthDate' id='birthDate'></p>
+
+        <p><label for='custom_Gender'>Gender</label><br /><select name='custom_Gender' id='custom_Gender'>
+                <option value=''></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select></p>
+
+        <p class="abHP">
+            <label for="_Website">Website</label>
+            <input type="text" name="_Website" value="">
+        </p>
+
+        <div class="form-action">
+            <button type="submit" aria-describedby="invalidMessage">Submit</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

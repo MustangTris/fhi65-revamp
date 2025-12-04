@@ -1,31 +1,8 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const AgencyBlocForm = () => {
-    useEffect(() => {
-        const checkboxes = document.querySelectorAll('.checkbox-list-item');
-
-        checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener('change', function (this: HTMLInputElement) {
-                const fieldName = this.getAttribute('data-field-name');
-                if (!fieldName) return;
-                const hiddenField = document.querySelector(`input[name="${fieldName}"]`) as HTMLInputElement;
-
-                if (hiddenField) {
-                    const selectedValues: string[] = [];
-                    const matchingCheckboxes = document.querySelectorAll(`.checkbox-list-item[data-field-name="${fieldName}"]:checked`) as NodeListOf<HTMLInputElement>;
-
-                    matchingCheckboxes.forEach(function (cb) {
-                        selectedValues.push(cb.value);
-                    });
-
-                    hiddenField.value = selectedValues.join('||');
-                }
-            });
-        });
-    }, []);
-
     return (
         <div className="w-full max-w-md mx-auto">
             <style jsx>{`
@@ -100,7 +77,7 @@ const AgencyBlocForm = () => {
             `}</style>
 
             <form
-                autocomplete="off"
+                autoComplete="off"
                 action="https://app.agencybloc.com/fp/webToLead/v1/QWY3BZ6DIFZ7PNCQKGGP/"
                 method="post"
                 className="abLeadForm space-y-6"
