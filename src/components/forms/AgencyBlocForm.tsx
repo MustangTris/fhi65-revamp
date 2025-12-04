@@ -1,8 +1,24 @@
 "use client";
 
-import React from 'react';
+import React, { useActionState, useEffect } from 'react';
+import { sendQuoteEmail } from '../../app/actions/send-quote';
+import { useRouter } from 'next/navigation';
+
+const initialState = {
+    message: '',
+    success: false,
+};
 
 const AgencyBlocForm = () => {
+    const [state, formAction, isPending] = useActionState(sendQuoteEmail, initialState);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (state.success) {
+            router.push('/thank-you');
+        }
+    }, [state.success, router]);
+
     return (
         <div className="w-full max-w-md mx-auto">
             <style jsx>{`
@@ -55,6 +71,11 @@ const AgencyBlocForm = () => {
                     transform: translateY(-2px);
                     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
                 }
+                
+                .abLeadForm button[type="submit"]:disabled {
+                    opacity: 0.7;
+                    cursor: not-allowed;
+                }
 
                 .invalid-message {
                     display: none;
@@ -78,10 +99,15 @@ const AgencyBlocForm = () => {
 
             <form
                 autoComplete="off"
-                action="https://app.agencybloc.com/fp/webToLead/v1/QWY3BZ6DIFZ7PNCQKGGP/"
-                method="post"
+                action={formAction}
                 className="abLeadForm space-y-6"
             >
+                {state.message && !state.success && (
+                    <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
+                        {state.message}
+                    </div>
+                )}
+
                 <p id='invalidMessage' className='invalid-message'>Please review the form.</p>
 
                 <div>
@@ -150,13 +176,10 @@ const AgencyBlocForm = () => {
                     </select>
                 </div>
 
-                <p className="hidden">
-                    <label htmlFor="_Website">Website</label>
-                    <input type="text" name="_Website" defaultValue="" />
-                </p>
-
                 <div className="form-action pt-4">
-                    <button type="submit" aria-describedby="invalidMessage">Get My Free Quote</button>
+                    <button type="submit" disabled={isPending} aria-describedby="invalidMessage">
+                        {isPending ? 'Sending...' : 'Get My Free Quote'}
+                    </button>
                 </div>
             </form>
         </div>
