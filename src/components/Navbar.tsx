@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ['Home', 'About', 'Quotes', 'Tips', 'News'];
+  const menuItems = ['Home', 'About', 'Quotes', 'Tips', 'News', 'Back Office'];
 
   return (
     <div className="sticky top-4 z-50 flex justify-center px-4 mb-8">
@@ -32,7 +32,7 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <Link
               key={item}
-              href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+              href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
               className="px-4 py-2 text-[#005d9a] font-medium rounded-full hover:bg-blue-50/50 transition-all duration-200"
             >
               {item}
@@ -77,7 +77,7 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <Link
                 key={item}
-                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
                 className="px-4 py-3 text-[#005d9a] font-medium rounded-xl hover:bg-blue-50/50 transition-colors"
                 onClick={() => setIsOpen(false)}
               >

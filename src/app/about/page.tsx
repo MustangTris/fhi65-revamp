@@ -48,10 +48,13 @@ export default function AboutPage() {
                                 <h2 className="text-3xl md:text-4xl font-bold text-[#005d9a] mb-8">Our Story</h2>
                                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed font-medium">
                                     <p>
-                                        For the past 10 years, I’ve learned everything I can about Medicare from the best expert in the field, my mom, Maureen Feldman.
+                                        For close to 20 years, we have dedicated ourselves to mastering the complexities of Medicare, learning from the best in the field to serve our community with excellence. What started as a family mission has grown into a lifelong commitment to helping our neighbors navigate their healthcare options with confidence and peace of mind.
                                     </p>
                                     <p>
-                                        It can be very confusing and I am dedicated to simplifying the process for my clients and finding them the best plan that meets their needs.
+                                        Medicare can be overwhelming, but we are here to simplify the process. Our goal is not just to find a plan, but to find the <em>right</em> plan—one that truly meets your unique needs. We believe that everyone deserves clarity, patience, and an advocate who puts their interests first.
+                                    </p>
+                                    <p>
+                                        We are incredibly humbled and grateful for the trust you have placed in us. Being recognized with awards like the Business of The Year 2025 and the NABIP Soaring Eagle is a tremendous honor, but our greatest reward is the satisfaction of our clients. Thank you for allowing us to be part of your healthcare journey; we look forward to serving you for many years to come.
                                     </p>
                                 </div>
                             </div>
