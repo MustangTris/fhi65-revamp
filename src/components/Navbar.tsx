@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ['Home', 'About', 'Quotes', 'News'];
+  const menuItems = ['Home', 'About', 'Quotes', 'Tips', 'News'];
 
   return (
     <div className="sticky top-4 z-50 flex justify-center px-4 mb-8">
