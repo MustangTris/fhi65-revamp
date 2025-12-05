@@ -123,7 +123,7 @@ export default function BackOfficePage() {
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-[#005d9a] mb-4">Transparent Valuation</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Our commission retention structure is simple and rewarding.
+                            Our commission split structure is simple and rewarding.
                         </p>
                     </div>
 
@@ -135,7 +135,7 @@ export default function BackOfficePage() {
                             <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
                             <div className="border-t border-gray-200 pt-8">
                                 <div className="text-5xl font-bold text-[#005d9a] mb-2">60%</div>
-                                <div className="text-gray-600 font-medium">Retention Rate</div>
+                                <div className="text-gray-600 font-medium">Commission Split</div>
                             </div>
                         </div>
 
@@ -149,7 +149,7 @@ export default function BackOfficePage() {
                             <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
                             <div className="border-t border-gray-200 pt-8">
                                 <div className="text-6xl font-bold text-[#005d9a] mb-2">65%</div>
-                                <div className="text-gray-600 font-bold">Retention Rate</div>
+                                <div className="text-gray-600 font-bold">Commission Split</div>
                             </div>
                         </div>
 
@@ -160,7 +160,7 @@ export default function BackOfficePage() {
                             <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
                             <div className="border-t border-gray-200 pt-8">
                                 <div className="text-5xl font-bold text-[#005d9a] mb-2">70%</div>
-                                <div className="text-gray-600 font-medium">Retention Rate</div>
+                                <div className="text-gray-600 font-medium">Commission Split</div>
                             </div>
                         </div>
                     </div>
