@@ -27,6 +27,11 @@ export async function sendQuoteEmail(prevState: any, formData: FormData) {
             return { success: false, message: 'Missing required fields' };
         }
 
+        if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+            console.error('SMTP Environment Variables are missing');
+            return { success: false, message: 'Server configuration error: SMTP settings are missing.' };
+        }
+
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
             port: Number(process.env.SMTP_PORT),

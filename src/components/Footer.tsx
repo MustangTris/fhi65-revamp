@@ -1,5 +1,8 @@
 import Link from 'next/link';
 
+
+import { Facebook, Youtube } from 'lucide-react';
+
 const Footer = () => {
     return (
         <footer className="bg-gradient-to-b from-[#00152e] to-[#000f21] text-gray-300 relative overflow-hidden">
@@ -27,6 +30,15 @@ const Footer = () => {
                                 <span className="text-[#1e9cd7]">✉️</span>
                                 <a href="mailto:randy@fhi65.com" className="hover:text-white transition-colors text-sm font-medium">randy@fhi65.com</a>
                             </p>
+                        </div>
+                        {/* Social Media Links */}
+                        <div className="flex space-x-4 pt-4">
+                            <a href="https://www.facebook.com/FHI65" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#1877F2] transition-colors">
+                                <Facebook className="w-6 h-6" />
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCGMRE-RgoFlv3a10T1svUtg" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF0000] transition-colors">
+                                <Youtube className="w-6 h-6" />
+                            </a>
                         </div>
                     </div>
 
@@ -74,10 +86,10 @@ const Footer = () => {
             {/* Bottom Bar */}
             <div className="bg-[#000a14] py-8 border-t border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500 font-medium">
-                    <p>&copy; {new Date().getFullYear()} Foulds Health Insurance. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Intellectual Property of R.A. Foulds, Inc dba Foulds Health Insurance Agency.  Lic. 0G69218.</p>
                     <div className="flex space-x-8">
-                        <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/accessibility" className="hover:text-white transition-colors">Accessibility Statement</Link>
                         <Link href="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
                 </div>
