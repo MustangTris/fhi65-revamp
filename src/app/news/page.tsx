@@ -3,8 +3,11 @@ import Parser from "rss-parser";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "News & Insights | Foulds Health Insurance",
-    description: "Stay informed with the latest updates on Medicare, health insurance, and wellness from our expert team.",
+    title: "News & Insights",
+    description: "Stay informed with the latest updates on Medicare, health insurance, and wellness from our expert team. Read articles from Don Akchin and more.",
+    alternates: {
+        canonical: '/news',
+    },
 };
 
 interface Article {

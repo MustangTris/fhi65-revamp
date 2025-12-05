@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import ReviewCarousel from "../components/ReviewCarousel";
+
+export const metadata: Metadata = {
+  title: "Medicare Enrollment Made Simple | La Quinta's Local Experts",
+  description: "Serving the Coachella Valley for over 30 years. Get expert, free Medicare advice from Foulds Health Insurance Agency. No obligation to enroll.",
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function Home() {
   return (

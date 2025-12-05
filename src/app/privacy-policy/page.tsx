@@ -1,6 +1,16 @@
 
 import React from 'react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    description: "Read the Foulds Health Insurance Privacy Policy to understand how we collect, use, and protect your personal information.",
+    alternates: {
+        canonical: '/privacy-policy',
+    },
+};
+
 const PrivacyPolicyPage = () => {
     return (
         <div className="bg-[#f0f9ff] min-h-screen pt-24 pb-12">

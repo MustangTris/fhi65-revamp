@@ -1,6 +1,16 @@
 
 import React from 'react';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Accessibility Statement",
+    description: "Foulds Health Insurance Agency is committed to digital accessibility. Read our statement on WCAG 2.0 AA compliance and our ongoing efforts.",
+    alternates: {
+        canonical: '/accessibility',
+    },
+};
+
 const AccessibilityPage = () => {
     return (
         <div className="bg-[#f0f9ff] min-h-screen pt-24 pb-12">
@@ -27,7 +37,7 @@ const AccessibilityPage = () => {
                         </p>
 
                         <p className="mb-4">
-                            If, at any time, you have specific questions or concerns about the accessibility of any particular Web page on Foulds Health Insurance Agency please contact our Webmaster, Ameravant Web Design Studio via email (<a href="mailto:support@ameravant.com" className="text-[#1e9cd7] hover:underline">support@ameravant.com</a>) or call them at: 805-456-6014. Foulds Health Insurance Agency will make all reasonable efforts in order to update the page(s) and ensure their accessibility.
+                            If, at any time, you have specific questions or concerns about the accessibility of any particular Web page on Foulds Health Insurance Agency please contact Foulds Health Insurance Agency via email (<a href="mailto:randy@fhi65.com" className="text-[#1e9cd7] hover:underline">randy@fhi65.com</a>) or call us at: 760.346.6565. Foulds Health Insurance Agency will make all reasonable efforts in order to update the page(s) and ensure their accessibility.
                         </p>
                     </div>
                 </div>

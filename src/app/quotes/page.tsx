@@ -2,8 +2,11 @@ import AgencyBlocForm from "../../components/forms/AgencyBlocForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Get a Quote | Foulds Health Insurance",
-    description: "Request a free, no-obligation Medicare quote from Foulds Health Insurance. Personalized plans tailored to your needs.",
+    title: "Get a Quote",
+    description: "Request a free, no-obligation Medicare quote from Foulds Health Insurance. Personalized plans tailored to your specific healthcare needs and budget.",
+    alternates: {
+        canonical: '/quotes',
+    },
 };
 
 export default function QuotesPage() {

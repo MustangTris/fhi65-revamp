@@ -7,12 +7,9 @@ import { ArrowRight, CheckCircle2, TrendingUp, Users, FileText } from "lucide-re
 export default function BackOfficePage() {
     return (
         <div className="min-h-screen bg-[#f0f9ff] relative overflow-hidden font-[family-name:var(--font-outfit)]">
-            {/* Background Animated Blobs - Liquid Glass Effect */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-                <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-blue-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-                <div className="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-purple-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-[-10%] left-[20%] w-[50vw] h-[50vw] bg-pink-200/40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-            </div>
+            {/* Background - Static Gradient for Performance */}
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none -z-10" />
+            <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-purple-100/40 via-transparent to-transparent pointer-events-none -z-10" />
 
             <main className="relative z-10 pt-32 pb-16 px-6 lg:px-8 max-w-7xl mx-auto">
                 {/* Hero Section */}
@@ -83,22 +80,19 @@ export default function BackOfficePage() {
                         </div>
                     </div>
 
-                    <div className="relative">
-                        {/* Placeholder for visual or text from PDF */}
-                        <div className="glass p-8 rounded-[2.5rem] border-white/40">
-                            <div className="bg-white/40 rounded-2xl p-6 mb-6">
-                                <h3 className="text-xl font-bold text-[#005d9a] mb-2">From the Pitch Deck</h3>
-                                <p className="text-gray-500 italic">
-                                    [Content from "BoB Transfer Pitch Ver. 2.pdf" to be inserted here.
-                                    Targeting "Rest easy knowing your clients are in good hands" messaging.]
-                                </p>
-                            </div>
-                            <div className="bg-white/40 rounded-2xl p-6">
-                                <h3 className="text-xl font-bold text-[#005d9a] mb-2">Key Metrics</h3>
-                                <p className="text-gray-500 italic">
-                                    [Content from PDF regarding valuation multiples and transfer timeline.]
-                                </p>
-                            </div>
+                    {/* Visual / Commitment Section */}
+                    <div className="glass p-8 rounded-[2.5rem] border-white/40 flex flex-col justify-center">
+                        <div className="bg-white/40 rounded-2xl p-6 mb-6">
+                            <h3 className="text-xl font-bold text-[#005d9a] mb-2">Our Commitment</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Your book of business represents years of hard work and genuine relationships. We don't take that lightly. When you transfer your clients to Foulds Health Insurance Agency, you're ensuring they continue to receive the personalized, integrity-driven service they deserve.
+                            </p>
+                        </div>
+                        <div className="bg-white/40 rounded-2xl p-6">
+                            <h3 className="text-xl font-bold text-[#005d9a] mb-2">Seamless Integration</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                We utilize dedicated support staff to integrate your clients into our system without disruption. They'll continue to receive annual reviews, help with claims, and the expert guidance they've come to expect from you.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -121,10 +115,54 @@ export default function BackOfficePage() {
                         ))}
                     </div>
 
-                    <div className="mt-12 text-center">
-                        <p className="text-gray-500 max-w-2xl mx-auto italic mb-8">
-                            *Detailed steps from "SOP_ Retiring Agent Book of Business Acquisition.pdf" will be populated here once file access is confirmed.*
+                    {/* Detailed steps disclaimer removed for production readiness */}
+                </div>
+
+                {/* Commission Retention Payout Graphic */}
+                <div className="mb-24 animate-fade-in-up animation-delay-700">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-bold text-[#005d9a] mb-4">Transparent Valuation</h2>
+                        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Our commission retention structure is simple and rewarding.
                         </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-end">
+                        {/* Tier 1 */}
+                        <div className="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-transform duration-300">
+                            <div className="text-gray-500 font-medium mb-2 uppercase tracking-wide text-sm">Tier 1</div>
+                            <div className="text-2xl font-bold text-gray-900 mb-4">&lt; $100k</div>
+                            <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
+                            <div className="border-t border-gray-200 pt-8">
+                                <div className="text-5xl font-bold text-[#005d9a] mb-2">60%</div>
+                                <div className="text-gray-600 font-medium">Retention Rate</div>
+                            </div>
+                        </div>
+
+                        {/* Tier 2 */}
+                        <div className="glass-card p-8 rounded-[2rem] bg-white/60 border-blue-200 shadow-xl hover:-translate-y-2 transition-transform duration-300 relative transform scale-105 z-10">
+                            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#005d9a] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-md">
+                                Most Common
+                            </div>
+                            <div className="text-[#005d9a] font-medium mb-2 uppercase tracking-wide text-sm">Tier 2</div>
+                            <div className="text-2xl font-bold text-gray-900 mb-4">$100k - $250k</div>
+                            <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
+                            <div className="border-t border-gray-200 pt-8">
+                                <div className="text-6xl font-bold text-[#005d9a] mb-2">65%</div>
+                                <div className="text-gray-600 font-bold">Retention Rate</div>
+                            </div>
+                        </div>
+
+                        {/* Tier 3 */}
+                        <div className="glass-card p-8 rounded-[2rem] hover:-translate-y-2 transition-transform duration-300">
+                            <div className="text-gray-500 font-medium mb-2 uppercase tracking-wide text-sm">Tier 3</div>
+                            <div className="text-2xl font-bold text-gray-900 mb-4">&gt; $250k</div>
+                            <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
+                            <div className="border-t border-gray-200 pt-8">
+                                <div className="text-5xl font-bold text-[#005d9a] mb-2">70%</div>
+                                <div className="text-gray-600 font-medium">Retention Rate</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

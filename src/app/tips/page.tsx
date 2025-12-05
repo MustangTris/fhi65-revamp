@@ -2,8 +2,11 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Tips & Resources | Foulds Health Insurance',
-    description: 'Helpful tips and videos from Foulds Health Insurance to guide you through Medicare and health insurance decisions.',
+    title: "Tips & Resources",
+    description: "Helpful video tips and insights to guide you through Medicare, from open enrollment to understanding your coverage options.",
+    alternates: {
+        canonical: '/tips',
+    },
 };
 
 export default function TipsPage() {

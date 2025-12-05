@@ -3,8 +3,11 @@ import Image from "next/image";
 import { StaticBackground } from "../../components/ui/StaticBackground";
 
 export const metadata: Metadata = {
-    title: "About Us | Foulds Health Insurance",
-    description: "Learn about our mission, our story, and why we are dedicated to simplifying Medicare for our community.",
+    title: "About Us",
+    description: "Meet Randy and Lisa Foulds, the dedicated team behind Foulds Health Insurance. Learn about our mission to simplify Medicare for our La Quinta community.",
+    alternates: {
+        canonical: '/about',
+    },
 };
 
 export default function AboutPage() {

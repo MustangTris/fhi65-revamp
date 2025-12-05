@@ -2,8 +2,11 @@ import { StaticBackground } from "../../components/ui/StaticBackground";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact Us | Foulds Health Insurance",
-    description: "Get in touch with Foulds Health Insurance for expert Medicare advice. Call, email, or visit us in La Quinta.",
+    title: "Contact Us",
+    description: "Get in touch with Foulds Health Insurance for expert Medicare advice. Visit our La Quinta office, call us, or send a message. We're here to help.",
+    alternates: {
+        canonical: '/contact',
+    },
 };
 
 export default function ContactPage() {
