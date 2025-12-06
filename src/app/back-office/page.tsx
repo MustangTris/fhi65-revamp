@@ -94,6 +94,12 @@ export default function BackOfficePage() {
                                 We utilize dedicated support staff to integrate your clients into our system without disruption. They'll continue to receive annual reviews, help with claims, and the expert guidance they've come to expect from you.
                             </p>
                         </div>
+                        <div className="bg-white/40 rounded-2xl p-6 mt-6">
+                            <h3 className="text-xl font-bold text-[#005d9a] mb-2">Real-Time Portal Access</h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                Powered by AgencyBloc, our premium AMS+, you get secure internet access to your own agent portal. Stay connected with live updates on your book, verify client meetings, and track your monthly commission payouts and reconciliations with total transparency.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
