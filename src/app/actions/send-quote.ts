@@ -3,7 +3,7 @@
 import nodemailer from 'nodemailer';
 import { redirect } from 'next/navigation';
 
-export async function sendQuoteEmail(prevState: any, formData: FormData) {
+export async function sendQuoteEmail(prevState: unknown, formData: FormData) {
     let success = false;
 
     try {
@@ -64,8 +64,8 @@ export async function sendQuoteEmail(prevState: any, formData: FormData) {
         success = true;
     } catch (error) {
         console.error('Failed to send email:', error);
-        // @ts-ignore
-        const errorMessage = error?.message || 'Unknown error';
+
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
         console.error('Error details:', errorMessage);
         return { success: false, message: `Failed to send quote request: ${errorMessage}` };
     }

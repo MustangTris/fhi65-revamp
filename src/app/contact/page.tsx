@@ -1,4 +1,5 @@
 import { StaticBackground } from "../../components/ui/StaticBackground";
+import ContactForm from "../../components/forms/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -108,37 +109,7 @@ export default function ContactPage() {
                     {/* Contact Form */}
                     <div className="glass-card p-8 md:p-10 rounded-[2rem]">
                         <h2 className="text-2xl font-bold text-[#005d9a] mb-8">Send a Message</h2>
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label htmlFor="firstName" className="block text-sm font-bold text-gray-700 mb-2">First Name</label>
-                                    <input type="text" id="firstName" className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm" placeholder="John" />
-                                </div>
-                                <div>
-                                    <label htmlFor="lastName" className="block text-sm font-bold text-gray-700 mb-2">Last Name</label>
-                                    <input type="text" id="lastName" className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm" placeholder="Doe" />
-                                </div>
-                            </div>
-
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-bold text-gray-700 mb-2">Email Address</label>
-                                <input type="email" id="email" className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm" placeholder="john@example.com" />
-                            </div>
-
-                            <div>
-                                <label htmlFor="phone" className="block text-sm font-bold text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" id="phone" className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm" placeholder="(555) 123-4567" />
-                            </div>
-
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-bold text-gray-700 mb-2">Message</label>
-                                <textarea id="message" rows={4} className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm" placeholder="How can we help you?"></textarea>
-                            </div>
-
-                            <button type="submit" className="w-full bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md">
-                                Send Message
-                            </button>
-                        </form>
+                        <ContactForm />
                     </div>
                 </div>
             </div>

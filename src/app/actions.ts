@@ -4,7 +4,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
 
-export async function addArticle(prevState: any, formData: FormData) {
+export async function addArticle(prevState: unknown, formData: FormData) {
     try {
         const title = formData.get('title') as string;
         const date = formData.get('date') as string;

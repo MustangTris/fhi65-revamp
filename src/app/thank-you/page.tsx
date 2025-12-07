@@ -44,10 +44,10 @@ export default function ThankYouPage() {
                         Thank You!
                     </h1>
                     <p className="text-xl text-[#005d9a] font-medium mb-6">
-                        You've made a great choice.
+                        You&apos;ve made a great choice.
                     </p>
                     <p className="text-gray-600 mb-10 leading-relaxed">
-                        We've received your request and are already getting to work. You're in good hands with Foulds Health Insurance.
+                        We&apos;ve received your request and are already getting to work. You&apos;re in good hands with Foulds Health Insurance.
                     </p>
 
                     {/* Button */}
