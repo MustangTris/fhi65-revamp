@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 import { Facebook, Youtube } from 'lucide-react';
@@ -13,7 +14,16 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Brand & Contact */}
                     <div className="space-y-6">
-                        <h3 className="text-white text-2xl font-bold tracking-wide">FHI<span className="text-[#1e9cd7]">65</span></h3>
+                        <div className="inline-block p-4 rounded-2xl bg-white/5 backdrop-blur-2xl border border-white/10 shadow-2xl relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-50" />
+                            <Image
+                                src="/images/Logo with Words.svg"
+                                alt="FHI65"
+                                width={160}
+                                height={60}
+                                className="h-12 w-auto relative z-10"
+                            />
+                        </div>
                         <p className="text-sm leading-relaxed text-gray-400 font-medium">
                             Helping you navigate Medicare with confidence. Our expert advice is always free and comes with no obligation.
                         </p>
