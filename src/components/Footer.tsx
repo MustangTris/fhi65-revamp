@@ -14,14 +14,14 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Brand & Contact */}
                     <div className="space-y-6">
-                        <div className="inline-block p-4 rounded-2xl bg-white/85 backdrop-blur-2xl border border-white/20 shadow-2xl relative overflow-hidden">
+                        <div className="inline-block p-6 rounded-2xl bg-white/85 backdrop-blur-2xl border border-white/20 shadow-2xl relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-transparent opacity-50" />
                             <Image
                                 src="/images/Logo with Words.svg"
                                 alt="FHI65"
-                                width={160}
-                                height={60}
-                                className="h-12 w-auto relative z-10"
+                                width={240}
+                                height={90}
+                                className="h-20 w-auto relative z-10"
                             />
                         </div>
                         <p className="text-sm leading-relaxed text-gray-400 font-medium">

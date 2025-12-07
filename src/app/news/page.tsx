@@ -70,21 +70,10 @@ export default async function NewsPage() {
 
                 <div className="mb-16">
                     <div className="glass-card rounded-2xl shadow-sm border border-white/40 p-8 text-center">
-                        <h2 className="text-2xl font-bold text-[#005d9a] mb-4">Read Our Latest Insights</h2>
-                        <p className="text-gray-600 mb-6">
-                            Follow our expert contributor, Don Akchin, on Medium for in-depth articles on Medicare and health insurance.
+                        <h2 className="text-2xl font-bold text-[#005d9a] mb-4">Randy&apos;s Recommended Reads</h2>
+                        <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                            This is a curation of authors that Randy has personally recommended in the insurance field. He avidly reads their work concerning subjects like Medicare and related healthcare topics.
                         </p>
-                        <a
-                            href="https://don-53849.medium.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center bg-[#005d9a] text-white font-bold py-3 px-8 rounded-full hover:bg-[#1e9cd7] transition-colors shadow-md"
-                        >
-                            Visit Don Akchin on Medium
-                            <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M13.5 10.5h2v-2h-2v2zm-8 0h2v-2h-2v2zm4 0h2v-2h-2v2zm-4 4h2v-2h-2v2zm4 0h2v-2h-2v2zm4 0h2v-2h-2v2zM5 5v14h14V5H5zm16 0c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5z" />
-                            </svg>
-                        </a>
                     </div>
                 </div>
 

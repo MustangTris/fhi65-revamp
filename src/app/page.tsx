@@ -54,7 +54,7 @@ export default function Home() {
             </div>
 
             {/* Social Proof - Carousel */}
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-xl">
               <ReviewCarousel />
             </div>
           </div>

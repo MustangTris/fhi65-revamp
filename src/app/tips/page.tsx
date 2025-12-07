@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import GoogleReviews from '../../components/GoogleReviews';
 
 export const metadata: Metadata = {
     title: "Tips & Resources",
@@ -68,6 +69,8 @@ export default function TipsPage() {
                         </div>
                     ))}
                 </div>
+
+                <GoogleReviews />
 
                 <div className="glass-card rounded-3xl p-8 md:p-12 text-center space-y-6">
                     <h2 className="text-2xl font-bold text-[#005d9a]">Looking for more specific advice?</h2>
