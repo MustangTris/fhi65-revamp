@@ -134,7 +134,7 @@ export default function GoogleReviews() {
 
                 <div className="mt-12 text-center">
                     <a
-                        href={`https://search.google.com/local/reviews?placeid=${process.env.NEXT_PUBLIC_GOOGLE_PLACE_ID || ''}`}
+                        href="https://www.google.com/maps/place/Foulds+Health+Insurance+Agency/@33.677402,-116.3055446,17z/data=!4m8!3m7!1s0x80dafddfcc1e756d:0xbd23f3d68e55a6b5!8m2!3d33.6773976!4d-116.3029643!9m1!1b1!16s%2Fg%2F1thr7gdt?entry=ttu&g_ep=EgoyMDI1MTIwMi4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center px-6 py-3 bg-white text-[#005d9a] font-bold rounded-full hover:bg-gray-50 transition-colors shadow-md border border-gray-200"
