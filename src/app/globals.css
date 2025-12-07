@@ -12,19 +12,19 @@
 
   @keyframes blob {
     0% {
-      transform: translate(0px, 0px) scale(1);
+      transform: translate3d(0px, 0px, 0px) scale(1);
     }
 
     33% {
-      transform: translate(30px, -50px) scale(1.1);
+      transform: translate3d(30px, -50px, 0px) scale(1.1);
     }
 
     66% {
-      transform: translate(-20px, 20px) scale(0.9);
+      transform: translate3d(-20px, 20px, 0px) scale(0.9);
     }
 
     100% {
-      transform: translate(0px, 0px) scale(1);
+      transform: translate3d(0px, 0px, 0px) scale(1);
     }
   }
 
@@ -148,48 +148,41 @@ h6 {
 
 .flare-button {
   position: relative;
-  /* Ensure the button's own background (gradient) stays on top of the pseudo-elements if needed,
-     but we want the pseudos to be behind the button body.
-     Standard stacking context: Pseudos with z-index: -1 go behind the element's background 
-     UNLESS the element creates a strict stacking context? */
+  isolation: isolate;
+  /* Create new stacking context */
+  overflow: hidden;
+  /* Button itself defines the boundary/radius */
+  border-radius: 9999px;
+  /* Fallback for pill shape if not inherited */
 }
 
+/* 1. The Flare Layer (Bottom) */
 .flare-button::before {
   content: "";
   position: absolute;
-  inset: -3px;
-  /* Border width */
-  z-index: -1;
+  inset: -2px;
+  /* Flare peeks out by 2px */
+  z-index: -2;
+  /* Comet gradient: Transparent -> Fade In -> White Head */
   background: conic-gradient(from var(--gradient-angle),
-      #005d9a,
-      #93c5fd,
-      /* lightness added for flare effect */
-      #1e9cd7,
-      #d2ebff,
-      #1e9cd7,
-      #93c5fd,
-      #005d9a);
+      transparent 0%,
+      transparent 70%,
+      var(--color-brand-vibrant) 90%,
+      white 100%);
   border-radius: inherit;
-  /* Adapt to parent shape */
   animation: rotation 3s linear infinite;
+  /* Softness for the glow effect */
 }
 
+/* 2. The Solid Background Layer (Middle) */
 .flare-button::after {
   content: "";
   position: absolute;
-  inset: -3px;
-  z-index: -2;
-  background: conic-gradient(from var(--gradient-angle),
-      #005d9a,
-      #93c5fd,
-      #1e9cd7,
-      #d2ebff,
-      #1e9cd7,
-      #93c5fd,
-      #005d9a);
+  inset: 0;
+  /* Matches exact button size */
+  z-index: -1;
+  background: var(--btn-bg, #005d9a);
+  /* Default to brand blue */
   border-radius: inherit;
-  /* Adapt to parent shape */
-  animation: rotation 3s linear infinite;
-  filter: blur(15px);
-  opacity: 0.6;
+  /* Ensures the center is solid */
 }

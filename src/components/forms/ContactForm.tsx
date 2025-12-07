@@ -87,9 +87,10 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={isPending}
-                className="flare-button w-full bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                className="flare-button w-full text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                style={{ "--btn-bg": "linear-gradient(to right, #005d9a, #1e9cd7)" } as React.CSSProperties}
             >
-                {isPending ? 'Sending...' : 'Send Message'}
+                <span className="relative z-10">{isPending ? 'Sending...' : 'Send Message'}</span>
             </button>
         </form>
     );

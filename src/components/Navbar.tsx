@@ -54,9 +54,10 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="flare-button bg-[#005d9a] text-white px-6 py-2.5 rounded-full font-bold hover:bg-[#1e9cd7] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              className="flare-button text-white px-6 py-2.5 rounded-full font-bold hover:bg-[#1e9cd7] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+              style={{ "--btn-bg": "#005d9a" } as React.CSSProperties}
             >
-              Contact Us
+              <span className="relative z-10">Contact Us</span>
             </Link>
           </div>
 
@@ -98,10 +99,11 @@ const Navbar = () => {
               <div className="h-px bg-gray-200 my-2" />
               <Link
                 href="/contact"
-                className="flare-button px-4 py-3 text-center bg-[#005d9a] text-white font-bold rounded-xl hover:bg-[#1e9cd7] transition-colors shadow-md"
+                className="flare-button px-4 py-3 text-center text-white font-bold rounded-xl hover:bg-[#1e9cd7] transition-colors shadow-md"
+                style={{ "--btn-bg": "#005d9a" } as React.CSSProperties}
                 onClick={() => setIsOpen(false)}
               >
-                Contact Us
+                <span className="relative z-10">Contact Us</span>
               </Link>
             </div>
           </div>

@@ -62,7 +62,7 @@ export default function Home() {
 
         {/* Right Side: Image */}
         <div className="w-full lg:w-1/2 relative min-h-[500px] lg:min-h-full">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#f0f9ff] via-transparent to-transparent z-10 pointer-events-none lg:bg-gradient-to-l"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#f0f9ff] via-transparent to-transparent pointer-events-none lg:bg-gradient-to-l"></div>
           <Image
             src="/images/office-building.jpg"
             alt="Foulds Health Insurance Office Building"
