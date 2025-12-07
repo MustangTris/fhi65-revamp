@@ -15,11 +15,11 @@ const Navbar = () => {
     <>
       <Link href="/" className="fixed top-6 left-6 z-50 transition-transform hover:scale-105 hidden lg:block">
         <Image
-          src="/images/Logo with Words.svg"
+          src="/images/Logo.svg"
           alt="Foulds Health Insurance Logo"
-          width={150}
-          height={50}
-          className="h-10 w-auto bg-white/80 backdrop-blur-sm rounded-lg p-1 shadow-sm"
+          width={60}
+          height={60}
+          className="h-16 w-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)]"
           priority
         />
       </Link>
@@ -30,7 +30,7 @@ const Navbar = () => {
           alt="Foulds Health Insurance Logo"
           width={50}
           height={50}
-          className="h-10 w-auto bg-white/80 backdrop-blur-sm rounded-lg p-1 shadow-sm"
+          className="h-12 w-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]"
           priority
         />
       </Link>
