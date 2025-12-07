@@ -22,20 +22,22 @@ export async function sendQuoteEmail(prevState: unknown, formData: FormData) {
             gender: formData.get('custom_Gender'),
         };
 
+
         // Basic validation
         if (!data.firstName || !data.lastName || !data.email || !data.cellPhone) {
             return { success: false, message: 'Missing required fields' };
         }
 
-        if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+        if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_PORT) {
             console.error('SMTP Environment Variables are missing');
             return { success: false, message: 'Server configuration error: SMTP settings are missing.' };
         }
 
+        const port = Number(process.env.SMTP_PORT);
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT),
-            secure: false, // true for 465, false for other ports
+            port: port,
+            secure: port === 465, // true for 465, false for other ports
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
@@ -54,10 +56,18 @@ export async function sendQuoteEmail(prevState: unknown, formData: FormData) {
             </table>
         `;
 
+        const textContent = `
+New Quote Request
+
+${Object.entries(data).map(([key, value]) => `${key}: ${value || '-'}`).join('\n')}
+`;
+
         await transporter.sendMail({
             from: process.env.SMTP_USER,
             to: 'randy@fhi65.com',
+            replyTo: data.email as string,
             subject: `New Quote Request from ${data.firstName} ${data.lastName}`,
+            text: textContent,
             html: htmlContent,
         });
 

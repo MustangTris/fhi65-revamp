@@ -4,6 +4,9 @@ import nodemailer from 'nodemailer';
 import { redirect } from 'next/navigation';
 
 export async function sendContactEmail(prevState: unknown, formData: FormData) {
+    console.log('--- sendContactEmail ACTION STARTED ---');
+    console.log('FormData:', Object.fromEntries(formData));
+
     let success = false;
 
     try {
@@ -17,18 +20,20 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
 
         // Basic validation
         if (!data.firstName || !data.lastName || !data.email || !data.message) {
+            console.log('Validation failed:', data);
             return { success: false, message: 'Missing required fields' };
         }
 
-        if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
+        if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_PORT) {
             console.error('SMTP Environment Variables are missing');
             return { success: false, message: 'Server configuration error: SMTP settings are missing.' };
         }
 
+        const port = Number(process.env.SMTP_PORT);
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT),
-            secure: false, // true for 465, false for other ports
+            port: port,
+            secure: port === 465, // true for 465, false for other ports
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
@@ -61,10 +66,22 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
             </table>
         `;
 
+        const textContent = `
+New Contact Message
+
+First Name: ${data.firstName}
+Last Name: ${data.lastName}
+Email: ${data.email}
+Phone: ${data.phone || '-'}
+Message: ${data.message}
+`;
+
         await transporter.sendMail({
             from: process.env.SMTP_USER,
             to: 'randy@fhi65.com',
+            replyTo: data.email as string,
             subject: `New Contact Message from ${data.firstName} ${data.lastName}`,
+            text: textContent,
             html: htmlContent,
         });
 
