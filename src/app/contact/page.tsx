@@ -1,4 +1,3 @@
-import { StaticBackground } from "../../components/ui/StaticBackground";
 import ContactForm from "../../components/forms/ContactForm";
 import type { Metadata } from "next";
 
@@ -13,8 +12,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <div className="relative min-h-screen overflow-hidden pt-32 pb-20">
-            <StaticBackground />
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-[#005d9a] mb-6">Get in Touch</h1>

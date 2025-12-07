@@ -59,18 +59,18 @@ export default async function NewsPage() {
     const articles = await getMediumArticles();
 
     return (
-        <div className="bg-slate-50 min-h-screen py-12 lg:py-24">
+        <div className="min-h-screen py-12 lg:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h1 className="text-3xl md:text-5xl font-bold text-[#002147] mb-6">News & Insights</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold text-[#005d9a] mb-6">News & Insights</h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         Stay informed with the latest updates on Medicare, health insurance, and wellness.
                     </p>
                 </div>
 
                 <div className="mb-16">
-                    <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
-                        <h2 className="text-2xl font-bold text-[#002147] mb-4">Read Our Latest Insights</h2>
+                    <div className="glass-card rounded-2xl shadow-sm border border-white/40 p-8 text-center">
+                        <h2 className="text-2xl font-bold text-[#005d9a] mb-4">Read Our Latest Insights</h2>
                         <p className="text-gray-600 mb-6">
                             Follow our expert contributor, Don Akchin, on Medium for in-depth articles on Medicare and health insurance.
                         </p>
@@ -90,8 +90,8 @@ export default async function NewsPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {articles.map((post) => (
-                        <article key={post.id} className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 flex flex-col">
-                            <div className="h-48 bg-[#002147]/10 w-full relative overflow-hidden">
+                        <article key={post.id} className="glass-card rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-white/40 flex flex-col hover:-translate-y-1">
+                            <div className="h-48 bg-gray-100 w-full relative overflow-hidden">
                                 {post.image ? (
                                     <img
                                         src={post.image}
@@ -106,16 +106,16 @@ export default async function NewsPage() {
                             </div>
                             <div className="p-6 flex-1 flex flex-col">
                                 <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
-                                    <span className="font-semibold text-[#FFD700] uppercase tracking-wider truncate max-w-[60%]">{post.category}</span>
+                                    <span className="font-semibold text-[#1e9cd7] uppercase tracking-wider truncate max-w-[60%]">{post.category}</span>
                                     <span>{post.date}</span>
                                 </div>
-                                <h2 className="text-xl font-bold text-[#002147] mb-3 leading-tight hover:text-blue-700 transition-colors line-clamp-2">
+                                <h2 className="text-xl font-bold text-[#005d9a] mb-3 leading-tight hover:text-[#1e9cd7] transition-colors line-clamp-2">
                                     <a href={post.link} target="_blank" rel="noopener noreferrer">{post.title}</a>
                                 </h2>
                                 <p className="text-gray-600 mb-4 flex-1 line-clamp-3">
                                     {post.excerpt}
                                 </p>
-                                <a href={post.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#002147] font-semibold hover:text-[#FFD700] transition-colors">
+                                <a href={post.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-[#1e9cd7] font-semibold hover:text-[#005d9a] transition-colors">
                                     Read Article <span className="ml-2">→</span>
                                 </a>
                             </div>

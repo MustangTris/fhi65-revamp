@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { StaticBackground } from "../../components/ui/StaticBackground";
 
 export const metadata: Metadata = {
     title: "About Us",
@@ -13,8 +12,6 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <div className="relative min-h-screen overflow-hidden">
-            <StaticBackground />
-
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">

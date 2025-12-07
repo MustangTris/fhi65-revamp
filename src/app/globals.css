@@ -72,6 +72,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #f0f9ff;
+  /* Fallback light bg */
   overflow-x: hidden;
 }
 
@@ -84,7 +85,7 @@ h6 {
   font-family: var(--font-outfit), sans-serif;
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism Utilities - Light Mode */
 .glass {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
@@ -100,15 +101,17 @@ h6 {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
+/* Dark glass for specific overlays or dark sections */
 .glass-dark {
   background: rgba(0, 93, 154, 0.85);
+  /* Dark Brand Blue base */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar - Light Theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -124,4 +127,69 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
+}
+
+/* Flare Animation */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.flare-button {
+  position: relative;
+  /* Ensure the button's own background (gradient) stays on top of the pseudo-elements if needed,
+     but we want the pseudos to be behind the button body.
+     Standard stacking context: Pseudos with z-index: -1 go behind the element's background 
+     UNLESS the element creates a strict stacking context? */
+}
+
+.flare-button::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  /* Border width */
+  z-index: -1;
+  background: conic-gradient(from var(--gradient-angle),
+      #005d9a,
+      #93c5fd,
+      /* lightness added for flare effect */
+      #1e9cd7,
+      #d2ebff,
+      #1e9cd7,
+      #93c5fd,
+      #005d9a);
+  border-radius: inherit;
+  /* Adapt to parent shape */
+  animation: rotation 3s linear infinite;
+}
+
+.flare-button::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -2;
+  background: conic-gradient(from var(--gradient-angle),
+      #005d9a,
+      #93c5fd,
+      #1e9cd7,
+      #d2ebff,
+      #1e9cd7,
+      #93c5fd,
+      #005d9a);
+  border-radius: inherit;
+  /* Adapt to parent shape */
+  animation: rotation 3s linear infinite;
+  filter: blur(15px);
+  opacity: 0.6;
 }

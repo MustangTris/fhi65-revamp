@@ -78,6 +78,6 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
     }
 
     if (success) {
-        redirect('/thank-you');
+        return { success: true, message: 'Thank you! Your message has been sent successfully.' };
     }
 }

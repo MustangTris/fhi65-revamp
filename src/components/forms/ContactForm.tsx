@@ -18,6 +18,11 @@ export default function ContactForm() {
                     {state.message}
                 </div>
             )}
+            {state?.success && (
+                <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
+                    {state.message}
+                </div>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -27,7 +32,7 @@ export default function ContactForm() {
                         id="firstName"
                         name="firstName"
                         required
-                        className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm"
+                        className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm text-gray-900 placeholder-gray-500"
                         placeholder="John"
                     />
                 </div>
@@ -38,7 +43,7 @@ export default function ContactForm() {
                         id="lastName"
                         name="lastName"
                         required
-                        className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm"
+                        className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm text-gray-900 placeholder-gray-500"
                         placeholder="Doe"
                     />
                 </div>
@@ -51,7 +56,7 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm text-gray-900 placeholder-gray-500"
                     placeholder="john@example.com"
                 />
             </div>
@@ -62,7 +67,7 @@ export default function ContactForm() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm text-gray-900 placeholder-gray-500"
                     placeholder="(555) 123-4567"
                 />
             </div>
@@ -74,7 +79,7 @@ export default function ContactForm() {
                     name="message"
                     required
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm"
+                    className="w-full px-4 py-3 bg-white/50 border border-white/60 rounded-xl focus:ring-2 focus:ring-[#005d9a] focus:border-transparent outline-none transition-all backdrop-blur-sm text-gray-900 placeholder-gray-500"
                     placeholder="How can we help you?"
                 ></textarea>
             </div>
@@ -82,7 +87,7 @@ export default function ContactForm() {
             <button
                 type="submit"
                 disabled={isPending}
-                className="w-full bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
+                className="flare-button w-full bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300 shadow-md disabled:opacity-70 disabled:cursor-not-allowed"
             >
                 {isPending ? 'Sending...' : 'Send Message'}
             </button>

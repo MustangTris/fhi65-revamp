@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { GlobalBackground } from "../components/ui/GlobalBackground";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ["latin"], variable: '--font-outfit' });
@@ -60,7 +61,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${outfit.variable} font-sans bg-white text-black`}>
+            <body className={`${inter.variable} ${outfit.variable} font-sans bg-white text-gray-900`}>
+                <GlobalBackground />
                 <div className="flex flex-col min-h-screen">
                     <Navbar />
                     <main className="flex-grow">

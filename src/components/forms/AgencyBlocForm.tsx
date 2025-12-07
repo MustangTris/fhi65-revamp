@@ -19,20 +19,21 @@ const AgencyBlocForm = () => {
                 .abLeadForm input[type="date"] {
                     width: 100%;
                     padding: 12px 16px;
-                    background: rgba(255, 255, 255, 0.5);
+                    background: rgba(255, 255, 255, 0.8);
                     border-radius: 12px;
-                    border: 1px solid rgba(255, 255, 255, 0.6);
+                    border: 1px solid rgba(0, 93, 154, 0.2);
                     font-size: 1rem;
                     max-width: 100%;
                     outline: none;
                     transition: all 0.3s ease;
                     backdrop-filter: blur(4px);
+                    color: #1f2937;
                 }
                 
                 .abLeadForm input[type="text"]:focus,
                 .abLeadForm select:focus,
                 .abLeadForm input[type="date"]:focus {
-                    background: rgba(255, 255, 255, 0.8);
+                    background: #ffffff;
                     border-color: #005d9a;
                     box-shadow: 0 0 0 3px rgba(0, 93, 154, 0.1);
                 }
@@ -161,10 +162,10 @@ const AgencyBlocForm = () => {
                 <div>
                     <label htmlFor='custom_Gender'>Gender</label>
                     <select name='custom_Gender' id='custom_Gender'>
-                        <option value=''></option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
+                        <option value='' className="text-black"></option>
+                        <option value="Male" className="text-black">Male</option>
+                        <option value="Female" className="text-black">Female</option>
+                        <option value="Other" className="text-black">Other</option>
                     </select>
                 </div>
 
