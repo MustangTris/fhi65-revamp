@@ -117,7 +117,7 @@ export default function Home() {
       </section>
 
       {/* About Teaser Section */}
-      <section className="pt-20 pb-0 relative z-10">
+      <section className="pt-20 pb-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col-reverse md:flex-row items-end gap-12">
             <div className="md:w-1/2">
