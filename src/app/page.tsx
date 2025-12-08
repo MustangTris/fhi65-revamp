@@ -117,20 +117,20 @@ export default function Home() {
       </section>
 
       {/* About Teaser Section */}
-      <section className="py-20 relative z-10">
+      <section className="pt-20 pb-0 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="flex flex-col-reverse md:flex-row items-end gap-12">
             <div className="md:w-1/2">
-              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="relative aspect-video">
                 <Image
                   src="/images/randy-lisa.png"
                   alt="Randy and Lisa Foulds"
                   fill
-                  className="object-cover"
+                  className="object-contain object-bottom"
                 />
               </div>
             </div>
-            <div className="md:w-1/2 text-center md:text-left">
+            <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0">
               <h2 className="text-3xl md:text-4xl font-bold text-[#005d9a] mb-6">
                 An Experienced Team You Can Trust
               </h2>
