@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Foulds Health Insurance Agency (FHI65) Website Revamp
 
-## Getting Started
+Welcome to the official repository for the Foulds Health Insurance Agency (FHI) website. This project is a complete modernize revamp of the agency's web presence, moving from a legacy platform to a high-performance, custom-built Next.js application.
 
-First, run the development server:
+## 🏥 About the Business
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Foulds Health Insurance Agency** is a trusted, family-owned insurance agency based in La Quinta, serving the Coachella Valley for over 30 years. Run by **Randy and Lisa Foulds**, the agency specializes in helping seniors navigate the complexities of Medicare.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Mission:** To make Medicare enrollment simple, transparent, and stress-free.
+- **Services:** Expert Medicare advice, enrollment assistance, and ongoing support—always free of charge to the client.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Purpose of the Website
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The goal of this project (`fhi65-revamp`) is to provide a user-friendly, accessible, and lightning-fast digital experience for seniors and their families. It serves as:
 
-## Learn More
+1.  **A Resource Hub:** offering free tips, curated news, and clear explanations of Medicare steps.
+2.  **A Trust Signal:** showcasing real client reviews and the local expertise of Randy and Lisa.
+3.  **A Lead Generation Tool:** making it easy for potential clients to request quotes or schedule consultations.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌟 Key Features & Content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### content Sections
+- **Home Page:** A welcoming hero section highlighting "Medicare Made Simple," a 3-step process explainer, and an introduction to the team.
+- **Tips & Reviews:** A dedicated area for helpful advice and real-time Google Reviews from satisfied clients.
+- **News Curation:** A curated selection of articles from trusted authors in the insurance field.
+- **Contact & Quotes:** Streamlined forms to get in touch or request a free quote securely.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Design & Performance
+- **"Liquid Glass" UI:** A modern, premium aesthetic inspired by Apple's glassmorphism design language, featuring subtle transparencies and blurs.
+- **Accessibility First:** High contrast text, clear typography (Inter & Outfit fonts), and semantic HTML to ensure usability for seniors.
+- **Performance:** Built for speed with Next.js, optimized images, and efficient code to ensure instant load times even on slower connections.
+- **SEO Optimized:** Best-practice metadata, semantic structure, and fast performance to ensure high visibility in local search results.
 
-## Deploy on Vercel
+## 🛠️ Technology Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is built with the latest modern web technologies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Analytics:** [Vercel Analytics](https://vercel.com/analytics)
+- **Email:** [Nodemailer](https://nodemailer.com/) (for contact forms)
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/MustangTris/fhi65-revamp.git
+    cd fhi65-revamp
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open locally:**
+    Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📦 Deployment
+
+The application is optimized for deployment on **Vercel**. Pushes to the `main` branch will automatically trigger a deployment.
+
+---
+
+*© 2025 Foulds Health Insurance Agency. All rights reserved.*

@@ -26,20 +26,11 @@ export const metadata: Metadata = {
         title: "Foulds Health Insurance | Medicare Enrollment Made Simple",
         description: "Expert advice on Medicare options in La Quinta and beyond. We simplify the complex world of Medicare.",
         siteName: "Foulds Health Insurance",
-        images: [
-            {
-                url: "/images/office-building.jpg",
-                width: 1200,
-                height: 630,
-                alt: "Foulds Health Insurance Office",
-            },
-        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Foulds Health Insurance | Medicare Enrollment Made Simple",
         description: "Expert advice on Medicare options in La Quinta and beyond. We simplify the complex world of Medicare.",
-        images: ["/images/office-building.jpg"],
     },
     robots: {
         index: true,
