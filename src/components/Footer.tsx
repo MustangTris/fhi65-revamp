@@ -100,11 +100,10 @@ const Footer = () => {
                     <div className="flex space-x-8">
                         <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link href="/accessibility" className="hover:text-white transition-colors">Accessibility Statement</Link>
-                        <Link href="/admin" className="hover:text-white transition-colors">Admin</Link>
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 

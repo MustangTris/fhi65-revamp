@@ -15,8 +15,8 @@ export const metadata: Metadata = {
         default: "Foulds Health Insurance | Medicare Enrollment Made Simple",
         template: "%s | Foulds Health Insurance"
     },
-    description: "Expert advice on Medicare options in La Quinta and beyond. Foulds Health Insurance Agency simplifies Medicare enrollment with integrity and experience.",
-    keywords: ["Medicare", "Health Insurance", "La Quinta", "Coachella Valley", "Medicare Advantage", "Medicare Supplement", "Foulds Health Insurance", "Randy Foulds"],
+    description: "Expert Medicare advice serving the entire Coachella Valley, including La Quinta, Palm Springs, Rancho Mirage, Palm Desert, Indio, Cathedral City, and Thermal.",
+    keywords: ["Medicare", "Health Insurance", "La Quinta", "Coachella Valley", "Palm Springs", "Rancho Mirage", "Palm Desert", "Indio", "Cathedral City", "Thermal", "Indian Wells", "Desert Hot Springs", "Medicare Advantage", "Medicare Supplement", "Foulds Health Insurance", "Randy Foulds"],
     authors: [{ name: "Randy Foulds" }, { name: "Lisa Foulds" }],
     creator: "Foulds Health Insurance Agency",
     openGraph: {
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: "https://fhi65.com",
         title: "Foulds Health Insurance | Medicare Enrollment Made Simple",
-        description: "Expert advice on Medicare options in La Quinta and beyond. We simplify the complex world of Medicare.",
+        description: "Expert Medicare advice serving the entire Coachella Valley, including La Quinta, Palm Springs, Rancho Mirage, and Palm Desert. We simplify the complex world of Medicare.",
         siteName: "Foulds Health Insurance",
     },
     twitter: {
         card: "summary_large_image",
         title: "Foulds Health Insurance | Medicare Enrollment Made Simple",
-        description: "Expert advice on Medicare options in La Quinta and beyond. We simplify the complex world of Medicare.",
+        description: "Expert Medicare advice serving the entire Coachella Valley, including La Quinta, Palm Springs, Rancho Mirage, and Palm Desert. We simplify the complex world of Medicare.",
     },
     robots: {
         index: true,

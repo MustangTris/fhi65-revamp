@@ -5,7 +5,7 @@ import ReviewCarousel from "../components/ReviewCarousel";
 
 export const metadata: Metadata = {
   title: "Medicare Enrollment Made Simple | La Quinta's Local Experts",
-  description: "Serving the Coachella Valley for over 30 years. Get expert, free Medicare advice from Foulds Health Insurance Agency. No obligation to enroll.",
+  description: "Serving the entire Coachella Valley including La Quinta, Palm Springs, Rancho Mirage, and Palm Desert for over 30 years. Get expert, free Medicare advice from Foulds Health Insurance Agency.",
   alternates: {
     canonical: '/',
   },
@@ -21,7 +21,7 @@ export default function Home() {
         <div className="w-full lg:w-1/2 flex flex-col justify-center p-8 lg:p-20 relative z-10">
           <div className="max-w-xl mx-auto lg:mx-0">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#d2ebff] text-[#005d9a] text-sm font-bold mb-6 shadow-sm border border-blue-100">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#005d9a] text-white text-sm font-bold mb-6 shadow-sm border border-blue-100">
               <span className="mr-2">📍</span> La Quinta&apos;s Local Experts
             </div>
 
