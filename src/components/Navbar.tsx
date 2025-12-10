@@ -82,7 +82,7 @@ const Navbar = () => {
 
           {/* Mobile/Tablet Dropdown */}
           <div
-            className={`absolute top-full left-0 right-0 mt-4 p-4 glass rounded-3xl shadow-2xl lg:hidden overflow-hidden transition-all duration-300 ease-in-out origin-top ${isOpen ? "opacity-100 scale-100 translate-y-0 visible" : "opacity-0 scale-95 -translate-y-4 invisible"
+            className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 p-4 glass rounded-3xl shadow-2xl lg:hidden overflow-hidden transition-all duration-300 ease-in-out origin-top w-[calc(100vw-2rem)] max-w-md ${isOpen ? "opacity-100 scale-100 translate-y-0 visible" : "opacity-0 scale-95 -translate-y-4 invisible"
               }`}
           >
             <div className="flex flex-col space-y-2">
