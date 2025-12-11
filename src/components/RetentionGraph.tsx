@@ -15,15 +15,6 @@ export function RetentionGraph() {
                 {/* Graph Container */}
                 <div className="relative w-full aspect-[16/9] lg:aspect-[21/9] max-h-[500px]">
 
-                    {/* Axis Labels */}
-                    {/* Axis Labels */}
-                    <div className="absolute top-1/2 -left-12 text-xs font-bold text-gray-500 uppercase tracking-widest -rotate-90 -translate-y-1/2">
-                        Annual Gross Earnings
-                    </div>
-                    <div className="absolute bottom-0 left-1/2 text-xs font-bold text-gray-500 uppercase tracking-widest -translate-x-1/2 translate-y-8">
-                        Time
-                    </div>
-
                     <svg
                         viewBox="0 0 1000 400"
                         className="w-full h-full overflow-visible"
@@ -32,6 +23,31 @@ export function RetentionGraph() {
                         {/* Grid/Axes Lines */}
                         <line x1="50" y1="350" x2="950" y2="350" stroke="#cbd5e1" strokeWidth="2" />
                         <line x1="50" y1="350" x2="50" y2="50" stroke="#cbd5e1" strokeWidth="2" />
+
+                        {/* Axis Labels (Fixed SVG coordinates) */}
+                        <text
+                            x="30"
+                            y="200"
+                            transform="rotate(-90 30,200)"
+                            textAnchor="middle"
+                            fill="#6b7280"
+                            fontSize="10"
+                            fontWeight="bold"
+                            style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}
+                        >
+                            Annual Gross Earnings
+                        </text>
+                        <text
+                            x="500"
+                            y="380"
+                            textAnchor="middle"
+                            fill="#6b7280"
+                            fontSize="10"
+                            fontWeight="bold"
+                            style={{ textTransform: 'uppercase', letterSpacing: '0.1em' }}
+                        >
+                            Time
+                        </text>
 
                         {/* Gradient Definitions */}
                         <defs>
