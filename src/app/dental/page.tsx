@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function DentalPage() {
     // INFRASTRUCTURE: Insert commission link here
-    const COMMISSION_LINK = "#"; // Replace '#' with the actual commission link when available
+    const COMMISSION_LINK = "https://www.deltadentalins.com/shopping/delta/get-a-quote?issuerCode=DELTA&brokerId=306605";
 
     return (
         <div className="flex flex-col min-h-screen">
