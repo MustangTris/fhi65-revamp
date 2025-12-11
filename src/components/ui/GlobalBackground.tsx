@@ -4,10 +4,10 @@ export const GlobalBackground = () => {
     return (
         <div className="fixed inset-0 z-[-1] pointer-events-none overflow-hidden">
             {/* Base Background Color */}
-            <div className="absolute inset-0 bg-[#f0f9ff]" />
+            <div className="absolute inset-0 bg-[#fdfdff]" />
 
             {/* Base Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#d2ebff]/40 via-[#e0f2fe]/40 to-[#f0f9ff]/40" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#f0f9ff]/50 via-[#f8fbff]/50 to-[#ffffff]/50" />
 
             {/* Top Right - Vibrant Blob */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-[800px] h-[800px] bg-[#1e9cd7] rounded-full blur-[100px] opacity-20" />
