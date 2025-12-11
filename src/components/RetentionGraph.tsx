@@ -177,7 +177,7 @@ export function RetentionGraph() {
                         <div>
                             <h4 className="font-bold text-[#005d9a] mb-1">Why this matters</h4>
                             <p className="text-sm text-gray-600 leading-relaxed">
-                                Higher retention means compounding growth. By keeping clients happy and engaged, your book of business maintains its value, ensuring consistent annual payouts year after year.
+                                Higher retention means more commission for you. By reducing attrition, we ensure your book of business maintains its value, maximizing your annual payouts.
                             </p>
                         </div>
                     </div>

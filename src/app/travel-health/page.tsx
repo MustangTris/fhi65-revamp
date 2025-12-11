@@ -1,0 +1,59 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Travel Health Insurance | Foulds Health Insurance",
+    description: "Get covered for your travels. Apply for travel health insurance easily online with Foulds Health Insurance as your agent.",
+};
+
+export default function TravelHealthPage() {
+    // INFRASTRUCTURE: Insert commission link here
+    const COMMISSION_LINK = "#"; // Replace '#' with the actual commission link when available
+
+    return (
+        <div className="flex flex-col min-h-screen">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+                <div className="max-w-3xl mx-auto text-center">
+                    <h1 className="text-4xl md:text-5xl font-extrabold text-[#005d9a] mb-8">
+                        Travel Health Insurance
+                    </h1>
+
+                    <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                        Planning a trip abroad? Ensure you have the right medical coverage while you travel.
+                        We make it simple to get protected so you can explore the world with peace of mind.
+                    </p>
+
+                    <div className="bg-blue-50/50 rounded-3xl p-10 border border-blue-100 shadow-sm mb-12">
+                        <h2 className="text-2xl font-bold text-[#005d9a] mb-4">
+                            Apply Online
+                        </h2>
+                        <p className="text-lg text-gray-700 mb-8">
+                            Click the button below to apply directly through our partner carrier.
+                            By using this link, <span className="font-bold text-[#005d9a]">Foulds Health Insurance</span> will automatically be assigned as your agent,
+                            ready to service your policy and assist with any needs that arise.
+                        </p>
+
+                        <a
+                            href={COMMISSION_LINK}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex justify-center items-center bg-gradient-to-r from-[#005d9a] to-[#1e9cd7] text-white font-bold text-lg px-10 py-4 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                        >
+                            Get Travel Coverage
+                        </a>
+
+                        <p className="mt-4 text-sm text-gray-500">
+                            *You will be redirected to the carrier's secure application page.
+                        </p>
+                    </div>
+
+                    <div className="text-gray-600">
+                        <p className="italic">
+                            "We will be your agent ready to service your needs at ease."
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+}

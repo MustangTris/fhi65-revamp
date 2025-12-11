@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const menuItems = ['Home', 'About', 'Quotes', 'Tips', 'News', 'Back Office'];
+  const menuItems = ['Home', 'About', 'Quotes', 'Dental', 'Travel Health', 'Tips', 'News', 'Back Office'];
 
   return (
     <>
