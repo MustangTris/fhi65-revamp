@@ -16,7 +16,7 @@ export function RetentionGraph() {
                 <div className="relative w-full aspect-[16/9] lg:aspect-[21/9] max-h-[500px]">
 
                     {/* Axis Labels */}
-                    <div className="absolute top-0 left-0 text-xs font-bold text-gray-500 uppercase tracking-widest -rotate-90 origin-bottom-left translate-x-4 translate-y-full">
+                    <div className="absolute top-0 left-0 text-xs font-bold text-gray-500 uppercase tracking-widest -rotate-90 origin-bottom-left translate-x-8 translate-y-full">
                         Annual Gross Earnings
                     </div>
                     <div className="absolute bottom-0 right-0 text-xs font-bold text-gray-500 uppercase tracking-widest translate-y-6">
@@ -70,8 +70,8 @@ export function RetentionGraph() {
 
                         {/* Label for Lower Retention - positioned near the end of the line */}
                         <motion.text
-                            x="900"
-                            y="300"
+                            x="940"
+                            y="280"
                             fill="#64748b"
                             fontSize="14"
                             fontWeight="bold"
@@ -104,8 +104,8 @@ export function RetentionGraph() {
 
                         {/* Label for Higher Retention */}
                         <motion.text
-                            x="900"
-                            y="160"
+                            x="940"
+                            y="140"
                             fill="#005d9a"
                             fontSize="16"
                             fontWeight="bold"
@@ -148,23 +148,26 @@ export function RetentionGraph() {
 
 
                 {/* Explanation Card */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[90%] md:w-auto md:min-w-[400px]">
-                    <div className="glass-card p-6 rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg animate-fade-in-up animation-delay-1000">
-                        <div className="flex items-start gap-4">
-                            <div className="p-3 bg-blue-50/50 rounded-full text-[#005d9a]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
-                            </div>
-                            <div>
-                                <h4 className="font-bold text-[#005d9a] mb-1">Why this matters</h4>
-                                <p className="text-sm text-gray-600 leading-relaxed">
-                                    Higher retention means compounding growth. By keeping clients happy and engaged, your book of business maintains its value, ensuring consistent annual payouts year after year.
-                                </p>
-                            </div>
+            </div>
+
+            {/* Explanation Card - Now static in flow */}
+            <div className="mt-12 w-full max-w-xl mx-auto">
+                <div className="glass-card p-6 rounded-[2rem] bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg animate-fade-in-up animation-delay-1000">
+                    <div className="flex items-start gap-4">
+                        <div className="p-3 bg-blue-50/50 rounded-full text-[#005d9a]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+                        </div>
+                        <div>
+                            <h4 className="font-bold text-[#005d9a] mb-1">Why this matters</h4>
+                            <p className="text-sm text-gray-600 leading-relaxed">
+                                Higher retention means compounding growth. By keeping clients happy and engaged, your book of business maintains its value, ensuring consistent annual payouts year after year.
+                            </p>
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
+
     );
 }
