@@ -67,7 +67,7 @@ export default function Home() {
             src="/images/office-building.jpg"
             alt="Foulds Health Insurance Office Building"
             fill
-            className="object-cover rounded-bl-[80px] shadow-2xl"
+            className="object-cover rounded-l-[80px] shadow-2xl"
             priority
           />
         </div>

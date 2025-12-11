@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const PrivacyPolicyPage = () => {
     return (
-        <div className="bg-[#f0f9ff] min-h-screen pt-24 pb-12">
+        <div className="min-h-screen pt-24 pb-12">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
                     <h1 className="text-3xl font-bold text-[#005d9a] mb-8">Privacy Policy</h1>

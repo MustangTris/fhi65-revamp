@@ -7,7 +7,7 @@ import { RetentionGraph } from "../../components/RetentionGraph";
 
 export default function BackOfficePage() {
     return (
-        <div className="min-h-screen bg-[#f0f9ff] relative overflow-hidden font-[family-name:var(--font-outfit)]">
+        <div className="min-h-screen relative overflow-hidden font-[family-name:var(--font-outfit)]">
             {/* Background - Static Gradient for Performance */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none -z-10" />
             <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-purple-100/40 via-transparent to-transparent pointer-events-none -z-10" />
