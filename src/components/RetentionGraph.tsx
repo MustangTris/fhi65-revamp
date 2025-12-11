@@ -16,10 +16,11 @@ export function RetentionGraph() {
                 <div className="relative w-full aspect-[16/9] lg:aspect-[21/9] max-h-[500px]">
 
                     {/* Axis Labels */}
-                    <div className="absolute top-0 left-0 text-xs font-bold text-gray-500 uppercase tracking-widest -rotate-90 origin-bottom-left translate-x-8 translate-y-full">
+                    {/* Axis Labels */}
+                    <div className="absolute top-1/2 -left-12 text-xs font-bold text-gray-500 uppercase tracking-widest -rotate-90 -translate-y-1/2">
                         Annual Gross Earnings
                     </div>
-                    <div className="absolute bottom-0 right-0 text-xs font-bold text-gray-500 uppercase tracking-widest translate-y-6">
+                    <div className="absolute bottom-0 left-1/2 text-xs font-bold text-gray-500 uppercase tracking-widest -translate-x-1/2 translate-y-8">
                         Time
                     </div>
 
