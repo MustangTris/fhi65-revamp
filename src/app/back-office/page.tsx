@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, TrendingUp, Users, FileText } from "lucide-react";
+import { RetentionGraph } from "../../components/RetentionGraph";
 
 export default function BackOfficePage() {
     return (
@@ -129,7 +130,7 @@ export default function BackOfficePage() {
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-[#005d9a] mb-4">Transparent Valuation</h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Our commission split structure is simple and rewarding.
+                            Our commission splits are heavily weighted in your favor, not ours.
                         </p>
                     </div>
 
@@ -141,7 +142,7 @@ export default function BackOfficePage() {
                             <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
                             <div className="border-t border-gray-200 pt-8">
                                 <div className="text-5xl font-bold text-[#005d9a] mb-2">60%</div>
-                                <div className="text-gray-600 font-medium">Commission Split</div>
+                                <div className="text-gray-600 font-medium">Your Share</div>
                             </div>
                         </div>
 
@@ -155,7 +156,7 @@ export default function BackOfficePage() {
                             <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
                             <div className="border-t border-gray-200 pt-8">
                                 <div className="text-6xl font-bold text-[#005d9a] mb-2">65%</div>
-                                <div className="text-gray-600 font-bold">Commission Split</div>
+                                <div className="text-gray-600 font-bold">Your Share</div>
                             </div>
                         </div>
 
@@ -166,11 +167,13 @@ export default function BackOfficePage() {
                             <div className="text-sm text-gray-500 mb-8">Annual Gross Commissions</div>
                             <div className="border-t border-gray-200 pt-8">
                                 <div className="text-5xl font-bold text-[#005d9a] mb-2">70%</div>
-                                <div className="text-gray-600 font-medium">Commission Split</div>
+                                <div className="text-gray-600 font-medium">Your Share</div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <RetentionGraph />
 
                 {/* CTA */}
                 <div className="text-center glass-card p-12 rounded-[3rem] max-w-4xl mx-auto relative overflow-hidden">
