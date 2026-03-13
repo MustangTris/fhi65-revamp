@@ -15,8 +15,13 @@ export default function ContactForm() {
 
     const handleAction = async (formData: FormData) => {
         if (executeRecaptcha) {
-            const token = await executeRecaptcha('contact_submit');
-            formData.append('gRecaptchaToken', token);
+            try {
+                const token = await executeRecaptcha('contact_submit');
+                formData.append('gRecaptchaToken', token);
+            } catch (err) {
+                console.error('Failed to execute reCAPTCHA:', err);
+                // We'll let the server action handle the missing token rather than crashing the client
+            }
         }
 
         // Pass to the server action
