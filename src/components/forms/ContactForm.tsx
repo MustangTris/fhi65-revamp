@@ -2,6 +2,7 @@
 
 import React, { useActionState } from 'react';
 import { sendContactEmail } from '../../app/actions/send-contact';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const initialState = {
     message: '',
@@ -10,9 +11,22 @@ const initialState = {
 
 export default function ContactForm() {
     const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
+    const { executeRecaptcha } = useGoogleReCaptcha();
+
+    const handleAction = async (formData: FormData) => {
+        if (executeRecaptcha) {
+            const token = await executeRecaptcha('contact_submit');
+            formData.append('gRecaptchaToken', token);
+        }
+
+        // Pass to the server action
+        React.startTransition(() => {
+            formAction(formData);
+        });
+    };
 
     return (
-        <form action={formAction} className="space-y-6">
+        <form action={handleAction} className="space-y-6">
             {state?.message && !state?.success && (
                 <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50" role="alert">
                     {state.message}
@@ -23,6 +37,19 @@ export default function ContactForm() {
                     {state.message}
                 </div>
             )}
+
+            {/* Honeypot field - visually hidden to catch bots */}
+            <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                <label htmlFor="fax_number_optional">Fax Number</label>
+                <input
+                    type="text"
+                    id="fax_number_optional"
+                    name="fax_number_optional"
+                    tabIndex={-1}
+                    autoComplete="off"
+                />
+            </div>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

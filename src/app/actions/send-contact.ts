@@ -24,6 +24,31 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
             return { success: false, message: 'Missing required fields' };
         }
 
+        // Check honeypot field (bots will likely fill this out, humans won't see it)
+        const honeypot = formData.get('fax_number_optional');
+        if (honeypot && honeypot.toString().trim() !== '') {
+            console.log('Spam detected via honeypot field in contact form.');
+            // Return fake success to the bot to prevent retries or detection
+            return { success: true, message: 'Thank you! Your message has been sent successfully.' };
+        }
+
+        // Verify reCAPTCHA token
+        const recaptchaToken = formData.get('gRecaptchaToken');
+        if (!recaptchaToken) {
+            console.error('reCAPTCHA token missing');
+            return { success: false, message: 'Security check failed. Please ensure you have JavaScript enabled.' };
+        }
+        const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+        });
+        const verifyJson = await verifyRes.json();
+        if (!verifyJson.success || verifyJson.score < 0.5) {
+            console.error('reCAPTCHA failed:', verifyJson);
+            return { success: false, message: 'Security verification failed. Please try again later.' };
+        }
+
         if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS || !process.env.SMTP_PORT) {
             console.error('SMTP Environment Variables are missing');
             return { success: false, message: 'Server configuration error: SMTP settings are missing.' };

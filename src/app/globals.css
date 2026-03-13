@@ -57,6 +57,10 @@ body {
   background: transparent;
   /* Fallback light bg */
   overflow-x: hidden;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 h1,
@@ -94,22 +98,9 @@ h6 {
   color: white;
 }
 
-/* Custom Scrollbar - Light Theme */
+/* Hide Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  display: none;
 }
 
 /* Flare Animation */

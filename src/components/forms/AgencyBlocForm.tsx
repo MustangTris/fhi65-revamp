@@ -2,6 +2,7 @@
 
 import React, { useActionState } from 'react';
 import { sendQuoteEmail } from '../../app/actions/send-quote';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 const initialState = {
     message: '',
@@ -10,6 +11,19 @@ const initialState = {
 
 const AgencyBlocForm = () => {
     const [state, formAction, isPending] = useActionState(sendQuoteEmail, initialState);
+    const { executeRecaptcha } = useGoogleReCaptcha();
+
+    const handleAction = async (formData: FormData) => {
+        if (executeRecaptcha) {
+            const token = await executeRecaptcha('quote_submit');
+            formData.append('gRecaptchaToken', token);
+        }
+
+        // Pass to the server action
+        React.startTransition(() => {
+            formAction(formData);
+        });
+    };
 
     return (
         <div className="w-full max-w-md mx-auto">
@@ -92,7 +106,7 @@ const AgencyBlocForm = () => {
 
             <form
                 autoComplete="off"
-                action={formAction}
+                action={handleAction}
                 className="abLeadForm space-y-6"
             >
                 {state?.message && !state?.success && (
@@ -102,6 +116,19 @@ const AgencyBlocForm = () => {
                 )}
 
                 <p id='invalidMessage' className='invalid-message'>Please review the form.</p>
+
+                {/* Honeypot field - visually hidden to catch bots */}
+                <div style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true">
+                    <label htmlFor="fax_number_optional">Fax Number</label>
+                    <input
+                        type="text"
+                        id="fax_number_optional"
+                        name="fax_number_optional"
+                        tabIndex={-1}
+                        autoComplete="off"
+                    />
+                </div>
+
 
                 <div>
                     <label htmlFor='firstName'>First Name (required)</label>
