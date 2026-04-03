@@ -52,7 +52,9 @@ export default function ContactPage() {
                         <div className="space-y-8">
                             <div className="flex justify-center pb-4">
                                 <Link
-                                    href="#contact-form"
+                                    href="https://calendly.com/randy-fhi65"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-[#d2ebff] text-[#005d9a] font-bold px-8 py-4 rounded-2xl shadow-[0_15px_40px_rgba(30,156,215,0.4)] hover:shadow-[0_20px_50px_rgba(30,156,215,0.5)] hover:-translate-y-0.5 transition-all duration-300 text-lg"
                                 >
                                     Make an Appointment!
