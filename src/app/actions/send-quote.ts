@@ -2,6 +2,7 @@
 
 import nodemailer from 'nodemailer';
 import { redirect } from 'next/navigation';
+import { escapeHtml } from '@/lib/utils';
 
 export async function sendQuoteEmail(prevState: unknown, formData: FormData) {
     let success = false;
@@ -75,7 +76,7 @@ export async function sendQuoteEmail(prevState: unknown, formData: FormData) {
                 ${Object.entries(data).map(([key, value]) => `
                     <tr style="border-bottom: 1px solid #eee;">
                         <td style="padding: 10px; font-weight: bold; width: 150px;">${key}</td>
-                        <td style="padding: 10px;">${value || '-'}</td>
+                        <td style="padding: 10px;">${value ? escapeHtml(value.toString()) : '-'}</td>
                     </tr>
                 `).join('')}
             </table>

@@ -2,6 +2,7 @@
 
 import nodemailer from 'nodemailer';
 import { redirect } from 'next/navigation';
+import { escapeHtml } from '@/lib/utils';
 
 export async function sendContactEmail(prevState: unknown, formData: FormData) {
     console.log('--- sendContactEmail ACTION STARTED ---');
@@ -70,23 +71,23 @@ export async function sendContactEmail(prevState: unknown, formData: FormData) {
             <table style="border-collapse: collapse; width: 100%;">
                 <tr style="border-bottom: 1px solid #eee;">
                     <td style="padding: 10px; font-weight: bold; width: 150px;">First Name</td>
-                    <td style="padding: 10px;">${data.firstName}</td>
+                    <td style="padding: 10px;">${data.firstName ? escapeHtml(data.firstName.toString()) : '-'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #eee;">
                     <td style="padding: 10px; font-weight: bold; width: 150px;">Last Name</td>
-                    <td style="padding: 10px;">${data.lastName}</td>
+                    <td style="padding: 10px;">${data.lastName ? escapeHtml(data.lastName.toString()) : '-'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #eee;">
                     <td style="padding: 10px; font-weight: bold; width: 150px;">Email</td>
-                    <td style="padding: 10px;">${data.email}</td>
+                    <td style="padding: 10px;">${data.email ? escapeHtml(data.email.toString()) : '-'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #eee;">
                     <td style="padding: 10px; font-weight: bold; width: 150px;">Phone</td>
-                    <td style="padding: 10px;">${data.phone || '-'}</td>
+                    <td style="padding: 10px;">${data.phone ? escapeHtml(data.phone.toString()) : '-'}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #eee;">
                     <td style="padding: 10px; font-weight: bold; width: 150px;">Message</td>
-                    <td style="padding: 10px;">${data.message}</td>
+                    <td style="padding: 10px;">${data.message ? escapeHtml(data.message.toString()) : '-'}</td>
                 </tr>
             </table>
         `;
