@@ -1,5 +1,6 @@
 import ContactForm from "../../components/forms/ContactForm";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Contact Us",
@@ -72,6 +73,12 @@ export default function ContactPage() {
                                     <h3 className="font-bold text-gray-900 text-lg">Call Us</h3>
                                     <p className="text-gray-600 mt-1 font-medium">760.346.6565</p>
                                     <p className="text-sm text-gray-500 mt-1">Mon-Fri from 9am to 5pm</p>
+                                    <Link
+                                        href="#contact-form"
+                                        className="inline-block mt-4 bg-[#d2ebff] text-[#005d9a] font-bold px-6 py-3 rounded-xl shadow-[0_15px_40px_rgba(30,156,215,0.4)] hover:shadow-[0_20px_50px_rgba(30,156,215,0.5)] hover:-translate-y-0.5 transition-all duration-300"
+                                    >
+                                        Make an Appointment!
+                                    </Link>
                                 </div>
                             </div>
 
@@ -104,7 +111,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Contact Form */}
-                    <div className="glass-card p-8 md:p-10 rounded-[2rem]">
+                    <div id="contact-form" className="glass-card p-8 md:p-10 rounded-[2rem]">
                         <h2 className="text-2xl font-bold text-[#005d9a] mb-8">Send a Message</h2>
                         <ContactForm />
                     </div>
