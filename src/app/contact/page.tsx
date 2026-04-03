@@ -50,6 +50,17 @@ export default function ContactPage() {
                         <h2 className="text-2xl font-bold text-[#005d9a] mb-8">Contact Information</h2>
 
                         <div className="space-y-8">
+                            <div className="flex justify-center pb-4">
+                                <Link
+                                    href="https://calendly.com/randy-fhi65"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-[#d2ebff] text-[#005d9a] font-bold px-8 py-4 rounded-2xl shadow-[0_15px_40px_rgba(30,156,215,0.4)] hover:shadow-[0_20px_50px_rgba(30,156,215,0.5)] hover:-translate-y-0.5 transition-all duration-300 text-lg"
+                                >
+                                    Make an Appointment!
+                                </Link>
+                            </div>
+
                             <div className="flex items-start space-x-4">
                                 <div className="bg-blue-100/50 p-4 rounded-2xl text-[#005d9a]">
                                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,12 +84,6 @@ export default function ContactPage() {
                                     <h3 className="font-bold text-gray-900 text-lg">Call Us</h3>
                                     <p className="text-gray-600 mt-1 font-medium">760.346.6565</p>
                                     <p className="text-sm text-gray-500 mt-1">Mon-Fri from 9am to 5pm</p>
-                                    <Link
-                                        href="#contact-form"
-                                        className="inline-block mt-4 bg-[#d2ebff] text-[#005d9a] font-bold px-6 py-3 rounded-xl shadow-[0_15px_40px_rgba(30,156,215,0.4)] hover:shadow-[0_20px_50px_rgba(30,156,215,0.5)] hover:-translate-y-0.5 transition-all duration-300"
-                                    >
-                                        Make an Appointment!
-                                    </Link>
                                 </div>
                             </div>
 
