@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Parser from "rss-parser";
 import type { Metadata } from "next";
+import { unstable_cache } from "next/cache";
 
 export const metadata: Metadata = {
     title: "News & Insights",
@@ -20,39 +21,47 @@ interface Article {
     image: string | null;
 }
 
+const getCachedMediumArticles = unstable_cache(
+    async (): Promise<Article[]> => {
+        const parser = new Parser();
+        try {
+            const feed = await parser.parseURL('https://medium.com/feed/@don-53849');
+
+            return feed.items.map((item) => {
+                // Extract image from content
+                const content = item['content:encoded'] || item.content || '';
+                const imageMatch = content.match(/<img[^>]+src="([^">]+)"/);
+                const image = imageMatch ? imageMatch[1] : null;
+
+                // Create excerpt (strip HTML and truncate)
+                const textContent = content.replace(/<[^>]+>/g, '');
+                const excerpt = textContent.slice(0, 150) + '...';
+
+                return {
+                    id: item.guid || item.link || Math.random().toString(),
+                    title: item.title || 'Untitled',
+                    excerpt: excerpt,
+                    date: item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    }) : '',
+                    category: item.categories && item.categories.length > 0 ? item.categories[0] : 'Insight',
+                    link: item.link || '#',
+                    image: image
+                };
+            });
+        } catch (error) {
+            console.error('Error fetching Medium articles:', error);
+            return [];
+        }
+    },
+    ['medium-articles'],
+    { revalidate: 3600, tags: ['articles'] }
+);
+
 async function getMediumArticles(): Promise<Article[]> {
-    const parser = new Parser();
-    try {
-        const feed = await parser.parseURL('https://medium.com/feed/@don-53849');
-
-        return feed.items.map((item) => {
-            // Extract image from content
-            const content = item['content:encoded'] || item.content || '';
-            const imageMatch = content.match(/<img[^>]+src="([^">]+)"/);
-            const image = imageMatch ? imageMatch[1] : null;
-
-            // Create excerpt (strip HTML and truncate)
-            const textContent = content.replace(/<[^>]+>/g, '');
-            const excerpt = textContent.slice(0, 150) + '...';
-
-            return {
-                id: item.guid || item.link || Math.random().toString(),
-                title: item.title || 'Untitled',
-                excerpt: excerpt,
-                date: item.pubDate ? new Date(item.pubDate).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                }) : '',
-                category: item.categories && item.categories.length > 0 ? item.categories[0] : 'Insight',
-                link: item.link || '#',
-                image: image
-            };
-        });
-    } catch (error) {
-        console.error('Error fetching Medium articles:', error);
-        return [];
-    }
+    return getCachedMediumArticles();
 }
 
 export default async function NewsPage() {
